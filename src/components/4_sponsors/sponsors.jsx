@@ -1,37 +1,82 @@
-import React from 'react';
-import TataIMG from './images/tata.png';
-import BmwIMG from './images/bmw.png';
-import BrandHouseIMG from './images/brandhouse.png';
-import SmaaashIMG from './images/smaaash.png';
-import ChennaiShoppingMallIMG from './images/chennaiShoppingMall.png';
-import KpIMG from './images/kp.png';
-
-;
-
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+import TataIMG from "./images/tata.png";
+import BmwIMG from "./images/bmw.png";
+import BrandHouseIMG from "./images/brandhouse.png";
+import SmaaashIMG from "./images/smaaash.png";
+import ChennaiShoppingMallIMG from "./images/chennaiShoppingMall.png";
+import KpIMG from "./images/kp.png";
+import "./style.css";
 
 const SponsorsSection = () => {
   return (
-    <section className="flex justify-center pt-[15rem] w-full">
-      {/* Inner Container */}
-      <div className="max-w-[1000px] w-full text-center">
-        <div className="text-left mb-16">
-          <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
-            <span className="text-hotpink">PROUDLY</span>
-            <br />
-            <span className="text-neongreen">SPONSORED BY</span>
-          </h1>
-        </div>
-
-        {/* Sponsors Logos */}
-        <div className="sponsors-logos flex flex-wrap justify-center gap-8">
-          <img src={TataIMG} alt="Sponsor 1" className="max-w-[300px] w-full" />
-          <img src={BmwIMG} alt="Sponsor 2" className="max-w-[300px] w-full" />
-          <img src={BrandHouseIMG} alt="Sponsor 3" className="max-w-[300px] w-full" />
-          <img src={SmaaashIMG} alt="Sponsor 4" className="max-w-[350px] w-full" />
-          <img src={ChennaiShoppingMallIMG} alt="Sponsor 5" className="max-w-[600px] w-full" />
-          <img src={KpIMG} alt="Sponsor 6" className="max-w-[600px] w-full" />
-        </div>
+    <section className="flex flex-col items-center pt-[15rem] w-full">
+      <div className="mb-16 text-center">
+        {" "}
+        {/* Center the heading */}
+        <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
+          <span className="text-hotpink">SPONSERED </span>
+          <br />
+          <span className="text-neongreen">and POWERED BY</span>
+        </h1>
       </div>
+
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={30}
+        slidesPerView={5}
+        loop={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+        }}
+        speed={7000}
+        loopedSlides={5}
+        centeredSlides={false}
+        className="w-full"
+        allowTouchMove={false}
+        breakpoints={{
+          1024: { slidesPerView: 5 },
+          768: { slidesPerView: 3 },
+          640: { slidesPerView: 2 },
+        }}
+      >
+        {/* Sponsor Logos */}
+        <SwiperSlide className="flex items-center justify-center">
+          <img src={TataIMG} alt="Sponsor 1" className="max-w-[300px] w-full" />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
+          <img src={BmwIMG} alt="Sponsor 2" className="max-w-[300px] w-full" />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
+          <img
+            src={BrandHouseIMG}
+            alt="Sponsor 3"
+            className="max-w-[300px] w-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
+          <img
+            src={SmaaashIMG}
+            alt="Sponsor 4"
+            className="max-w-[350px] w-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
+          <img
+            src={ChennaiShoppingMallIMG}
+            alt="Sponsor 5"
+            className="max-w-[600px] w-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
+          <img src={KpIMG} alt="Sponsor 6" className="max-w-[600px] w-full" />
+        </SwiperSlide>
+      </Swiper>
     </section>
   );
 };
