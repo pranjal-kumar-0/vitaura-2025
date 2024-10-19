@@ -4,7 +4,7 @@ import NumbersSection from './2_numbers/numbers';
 import InfoSection from './3_Info/infoSection';
 import SponsorsSection from './4_sponsors/sponsors';
 import CountdownTimer from './countdown/countdowntimer';
-import ScrollAnimation from "./timeline/timeline";
+import ScrollAnimation from "./timeline/scrollcount";
 import { MdArrowOutward } from "react-icons/md";
 
 
@@ -70,9 +70,9 @@ const LandingPageComponent = () => {
         <div className="mt-10"></div>
         <HeroSection />
         <CountdownTimer targetDate={targetDate} />
-        <NumbersSection />
-        <InfoSection />
         <ScrollAnimation />
+        {/* <NumbersSection /> */}
+        <InfoSection />
         <SponsorsSection />
       </main>
     </div>
