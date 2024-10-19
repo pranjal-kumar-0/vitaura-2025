@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'fluxbox';
+    src: url('../fonts//fluxbox.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+@font-face {
+  font-family: 'spacemono';
+  src: url('../fonts//spacemono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: linear-gradient(to bottom, #F50062, #b700ba) black;
+} */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  border-radius: 12px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vh !important;
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  /* Chrome, Edge, and Safari */
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #F50062, #b700ba);
+}
