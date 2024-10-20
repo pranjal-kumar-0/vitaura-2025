@@ -6,6 +6,7 @@ import SponsorsSection from './4_sponsors/sponsors';
 import CountdownTimer from './countdown/countdowntimer';
 import ScrollAnimation from "./timeline/scrollcount";
 import { MdArrowOutward } from "react-icons/md";
+import Footer from "./footer/footer"
 
 
 const HeroSection = () => {
@@ -74,6 +75,7 @@ const LandingPageComponent = () => {
         {/* <NumbersSection /> */}
         <InfoSection />
         <SponsorsSection />
+        <Footer /> {/* Make sure to include the Footer here */}
       </main>
     </div>
   );

@@ -18,9 +18,7 @@ const SponsorsSection = () => {
         {" "}
         {/* Center the heading */}
         <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
-          <span className="text-hotpink">SPONSERED </span>
-          <br />
-          <span className="text-neongreen">and POWERED BY</span>
+          <span className="text-neongreen">POWERED BY</span>
         </h1>
       </div>
 
