@@ -52,9 +52,11 @@ const ScrollAnimation = () => {
             const targetValue = counter.value;
             const newValue = customIncrement(0, targetValue, this.progress());
 
-            counterRefs.current[index].textContent = `${Math.ceil(
-              newValue
-            ).toLocaleString()}+`; // Format with commas
+            counterRefs.current[index].innerHTML = `
+            <span>${Math.ceil(newValue).toLocaleString()}</span>
+            <span class="-ml-14 bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text">+</span>
+          `;
+         // Format with commas
           },
         },
         "startCounters"
@@ -88,8 +90,7 @@ const ScrollAnimation = () => {
       }}
     >
       <h2
-        style={{ fontSize: "4rem", marginBottom: "40px" }}
-        className="font-fluxbox"
+        className="font-fluxbox bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-8xl"
       >
         Event Highlights
       </h2>
