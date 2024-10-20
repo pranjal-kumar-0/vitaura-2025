@@ -25,7 +25,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer-contact mb-4 text-left">
-            <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+            <p className="text-sm">Contact Us: <a href="mailto:uniquest.club@vitap.ac.in" className="text-[#ff9500] hover:text-white">uniquest.club@vitap.ac.in</a></p>
           </div>
           <div className="footer-rights text-left text-sm">
             <p className="font-spacemono">© 2024 Uniquest Club VIT-AP. All Rights Reserved.</p>
@@ -34,13 +34,13 @@ const Footer = () => {
 
         {/* Center Column */}
         <div className="footer-column mb-8 md:mb-0">
-          <div className="footer-logo mb-4">
+          <div className="footer-logo mb-8">
             <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
           </div>
           <div className="footer-social mb-4 flex space-x-4 text-left">
-            {/* <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/company/vitaura-24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaLinkedin size={30} />
-            </a> */}
+            </a>
             <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaInstagram size={30} />
             </a>
@@ -55,7 +55,7 @@ const Footer = () => {
 
         {/* Right Column */}
         <div className="footer-column mb-8 md:mb-0">
-          <div className="r-logo mb-4">
+          <div className="r-logo mb-6">
             <img src={ecell} alt="ECell Logo" className='ecell-logo'/> {/* Add class "ecell-logo" */}
           </div>
           <div className="footer-social mb-4 flex space-x-4 text-left">
@@ -67,7 +67,8 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer-contact mb-4 text-left">
-            <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+            <p className="text-sm">Contact Us:</p>
+            <p className="text-sm"><a href="mailto:entrepreneurship.club@vitap.ac.in" className="text-[#ff9500] hover:text-white">entrepreneurship.club@vitap.ac.in</a></p>
           </div>
           <div className="footer-rights text-left text-sm">
             <p className="font-spacemono">© 2024 Entrepreneurship Club VIT-AP.</p>

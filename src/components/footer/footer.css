@@ -11,16 +11,19 @@
   .footer-logo img {
     width: 200px;
     height: auto;
+    margin-left: -20px;
   }
 
   .l-logo img {
     width: 150px;
     height: 80px;
+    margin-left: -20px;
   }
 
   .r-logo img {
-    width: 125px;
-    height: 100px;
+    width: 100px;
+    height: 75px;
+    margin-left: -20px;
   }
   
   .footer-social a {
@@ -57,12 +60,12 @@
   
   /* Uniquest logo size */
   .uniquest-logo {
-    width: 150px; /* Adjust the width to your desired size */
-    height: 150px;
+    width: 100px; /* Adjust the width to your desired size */
+    height: 100px;
   }
 
   /* ECell logo size */
   .ecell-logo {
-    width: 100px; /* Adjust the width to your desired size */
-    height: 100px;
+    width: 70px; /* Adjust the width to your desired size */
+    height: 70px;
   }
