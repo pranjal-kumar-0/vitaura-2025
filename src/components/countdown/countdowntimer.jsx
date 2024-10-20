@@ -26,8 +26,27 @@ const CountdownTimer = ({ targetDate }) => {
 
   return (
     <div className="text-center">
-      
-      <div className="mt-4 text-7xl font-fluxbox text-neongreen">
+      <h2
+        style={{
+          fontSize: '5.5em', // Increased heading size
+          background: 'linear-gradient(to right, #FF7B02, #FC4C05)',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+          fontFamily: 'fluxbox'
+        }}
+      >
+        Time left for the event
+      </h2>
+      <div
+        style={{
+          fontSize: '5.5em', // Increased counter size
+          background: 'linear-gradient(to right, #F50062, #b700ba)',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+          fontFamily: 'spacemono', // Font for numbers
+        }}
+        className="mt-4"
+      >
         {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
       </div>
     </div>
