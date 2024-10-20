@@ -6,31 +6,71 @@ import logo from '../../images/finalfinal.png'; // Import your logo
 const Footer = () => {
   return (
     <footer className="footer bg-black text-gray-400 py-10">
-      <div className="container mx-auto flex flex-col items-center">
-        {/* Logo Section */}
-        <div className="footer-logo mb-4">
-          <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+      <div className="container mx-auto flex flex-col md:flex-row justify-between">
+
+        {/* Left Column */}
+        <div className="footer-column mb-8 md:mb-0">
+          <div className="footer-logo mb-4">
+            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+          </div>
+          <div className="footer-social mb-4 flex space-x-4 text-left">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaInstagram size={30} />
+            </a>
+          </div>
+          <div className="footer-contact mb-4 text-left">
+            <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+          </div>
+          <div className="footer-rights text-left text-sm">
+            <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
+          </div>
         </div>
 
-        {/* Social Media Links */}
-        <div className="footer-social mb-4 flex space-x-4">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-            <FaLinkedin size={30} />
-          </a>
-          <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-            <FaInstagram size={30} />
-          </a>
+        {/* Center Column */}
+        <div className="footer-column mb-8 md:mb-0">
+          <div className="footer-logo mb-4">
+            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+          </div>
+          <div className="footer-social mb-4 flex space-x-4 text-left">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaInstagram size={30} />
+            </a>
+          </div>
+          <div className="footer-contact mb-4 text-left">
+            <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+          </div>
+          <div className="footer-rights text-left text-sm">
+            <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
+          </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="footer-contact mb-4 text-center">
-          <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+        {/* Right Column */}
+        <div className="footer-column mb-8 md:mb-0">
+          <div className="footer-logo mb-4">
+            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+          </div>
+          <div className="footer-social mb-4 flex space-x-4 text-left">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaInstagram size={30} />
+            </a>
+          </div>
+          <div className="footer-contact mb-4 text-left">
+            <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
+          </div>
+          <div className="footer-rights text-left text-sm">
+            <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
+          </div>
         </div>
 
-        {/* Copyright Information */}
-        <div className="footer-rights text-center text-sm mt-4">
-          <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
-        </div>
       </div>
     </footer>
   );

@@ -5,7 +5,6 @@
     margin-top: 60px; /* Creates space between the footer and the content above */
     width: 100%;
     font-family: 'Spacemono', monospace; /* Matching font */
-    border-top: 2px solid #ff5900; /* Adds a distinct top border to separate footer */
     box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
   }
   
