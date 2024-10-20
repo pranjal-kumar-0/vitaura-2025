@@ -2,6 +2,9 @@ import React from 'react';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './footer.css'; // Ensure the CSS file path is correct
 import logo from '../../images/finalfinal.png'; // Import your logo
+import ecell from '../../images/logo-for-ec-without-background-white-1@2x.png'
+import uniquest from '../../images/uniquest-removebg-preview.png'
+
 
 const Footer = () => {
   return (
@@ -9,15 +12,15 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
 
         {/* Left Column */}
-        <div className="footer-column mb-8 md:mb-0">
-          <div className="footer-logo mb-4">
-            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+        <div className="footer-column mb-2 md:mb-0">
+          <div className="l-logo mb-4">
+            <img src={uniquest} alt="Uniquest" className='uniquest-logo'/> {/* Add class "uniquest-logo" */}
           </div>
           <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/company/uni-quest/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaLinkedin size={30} />
             </a>
-            <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.instagram.com/uniquest_vitap/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaInstagram size={30} />
             </a>
           </div>
@@ -25,7 +28,7 @@ const Footer = () => {
             <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
           </div>
           <div className="footer-rights text-left text-sm">
-            <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
+            <p className="font-spacemono">© 2024 Uniquest Club VIT-AP. All Rights Reserved.</p>
           </div>
         </div>
 
@@ -35,9 +38,9 @@ const Footer = () => {
             <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
           </div>
           <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            {/* <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaLinkedin size={30} />
-            </a>
+            </a> */}
             <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaInstagram size={30} />
             </a>
@@ -52,14 +55,14 @@ const Footer = () => {
 
         {/* Right Column */}
         <div className="footer-column mb-8 md:mb-0">
-          <div className="footer-logo mb-4">
-            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
+          <div className="r-logo mb-4">
+            <img src={ecell} alt="ECell Logo" className='ecell-logo'/> {/* Add class "ecell-logo" */}
           </div>
           <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/company/entrepreneurship-club-vit-ap/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaLinkedin size={30} />
             </a>
-            <a href="https://www.instagram.com/vitap.vitaura/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.instagram.com/entrepreneurshipclub_vitap/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaInstagram size={30} />
             </a>
           </div>
@@ -67,7 +70,8 @@ const Footer = () => {
             <p className="text-sm">Contact Us: <a href="mailto:contact@vitaura24.com" className="text-[#ff9500] hover:text-white">contact@vitaura24.com</a></p>
           </div>
           <div className="footer-rights text-left text-sm">
-            <p className="font-spacemono">© 2024 VITAURA-24. All Rights Reserved.</p>
+            <p className="font-spacemono">© 2024 Entrepreneurship Club VIT-AP.</p>
+            <p className="font-spacemono">All Rights Reserved.</p>
           </div>
         </div>
 
