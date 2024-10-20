@@ -10,7 +10,7 @@ const ScrollAnimation = () => {
 
   const counters = [
     { value: 10, label: "Events" },
-    { value: 1000, label: "Attendees" },
+    { value: 5000, label: "Registrations" },
     { value: 150000, label: "Prizes" },
   ];
 

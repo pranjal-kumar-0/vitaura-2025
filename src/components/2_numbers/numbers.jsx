@@ -56,7 +56,7 @@ const HackathonSection = () => {
               className="stat-label text-white text-lg"
               style={{ fontSize: "2.5rem" }}
             >
-              Attendees
+              Registrations
             </p>
           </div>
           <div className="stat-item text-center">
@@ -64,7 +64,7 @@ const HackathonSection = () => {
               className="stat-number hover:text-green-500 transition duration-300"
               style={{ fontSize: "6rem" }}
             >
-              1Lakh+
+              1.5Lakh+
             </h2>
             <p
               className="stat-label text-white text-lg"

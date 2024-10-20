@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
-import NumbersSection from './2_numbers/numbers';
 import InfoSection from './3_Info/infoSection';
 import SponsorsSection from './4_sponsors/sponsors';
 import CountdownTimer from './countdown/countdowntimer';
