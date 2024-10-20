@@ -15,13 +15,17 @@ const SponsorsSection = () => {
   return (
     <section className="flex flex-col items-center pt-[15rem] w-full">
       <div className="mb-16 text-center">
-        {" "}
         {/* Center the heading */}
         <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
-          <span className="text-neongreen">POWERED BY</span>
+          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text text-8xl">
+            POWERED
+          </span>{" "}
+          <span className= "bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-8xl">
+            BY
+          </span>
         </h1>
       </div>
-
+      
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
