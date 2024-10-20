@@ -7,6 +7,7 @@ import CountdownTimer from './countdown/countdowntimer';
 import ScrollAnimation from "./timeline/scrollcount";
 import { MdArrowOutward } from "react-icons/md";
 import Footer from "./footer/footer"
+import TimeLine from "./timeline/fest-timeline"
 
 
 const HeroSection = () => {
@@ -73,6 +74,7 @@ const LandingPageComponent = () => {
         <CountdownTimer targetDate={targetDate} />
         <ScrollAnimation />
         {/* <NumbersSection /> */}
+        <TimeLine />
         <InfoSection />
         <SponsorsSection />
         <Footer /> {/* Make sure to include the Footer here */}
