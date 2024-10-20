@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
-import InfoSection from './3_Info/infoSection';
+// import InfoSection from './3_Info/infoSection';
 import SponsorsSection from './4_sponsors/sponsors';
 import CountdownTimer from './countdown/countdowntimer';
 import ScrollAnimation from "./timeline/scrollcount";
@@ -72,9 +72,9 @@ const LandingPageComponent = () => {
         <CountdownTimer targetDate={targetDate} />
         <ScrollAnimation />
         {/* <NumbersSection /> */}
-        <InfoSection />
+        {/* <InfoSection /> */}
         <SponsorsSection />
-        <Footer /> {/* Make sure to include the Footer here */}
+        <Footer />
       </main>
     </div>
   );
