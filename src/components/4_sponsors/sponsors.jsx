@@ -4,11 +4,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import TataIMG from "./images/tata.png";
-import BmwIMG from "./images/bmw.png";
+import BmwIMG from "./images/jsp50logo.png";
 import BrandHouseIMG from "./images/brandhouse.png";
 import SmaaashIMG from "./images/smaaash.png";
 import ChennaiShoppingMallIMG from "./images/chennaiShoppingMall.png";
 import KpIMG from "./images/kp.png";
+import Asus from "./images/asus-logo-white.png"
 import "./style.css";
 
 const SponsorsSection = () => {
@@ -17,11 +18,11 @@ const SponsorsSection = () => {
       <div className="mb-16 text-center">
         {/* Center the heading */}
         <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
-          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text text-8xl">
-            POWERED
+          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-8xl">
+            SPONSORED &
           </span>{" "}
           <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-8xl">
-            BY
+            POWERED BY
           </span>
         </h1>
       </div>
@@ -48,24 +49,28 @@ const SponsorsSection = () => {
         }}
       >
         {/* Sponsor Logos */}
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={TataIMG} alt="Sponsor 1" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={TataIMG} alt="Sponsor 1" className="max-h-[150px] object-contain" />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={BmwIMG} alt="Sponsor 2" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={BmwIMG} alt="Sponsor 2" className="max-h-[150px] object-contain" />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={BrandHouseIMG} alt="Sponsor 3" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={BrandHouseIMG} alt="Sponsor 3" className="max-h-[150px] object-contain" />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={SmaaashIMG} alt="Sponsor 4" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={SmaaashIMG} alt="Sponsor 4" className="max-h-[150px] object-contain" />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={ChennaiShoppingMallIMG} alt="Sponsor 5" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={ChennaiShoppingMallIMG} alt="Sponsor 5" className="max-h-[150px] object-contain" />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center">
-          <img src={KpIMG} alt="Sponsor 6" className="max-w-[150px] w-full object-contain" />
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={KpIMG} alt="Sponsor 6" className="max-h-[150px] object-contain" />
         </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center h-[150px]">
+          <img src={Asus} alt="Sponsor 7" className="max-h-[150px] object-contain" />
+        </SwiperSlide>
+
       </Swiper>
     </section>
   );
