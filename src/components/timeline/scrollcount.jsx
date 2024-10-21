@@ -87,7 +87,7 @@ const ScrollAnimation = () => {
           <div key={index} className="flex flex-col items-center mb-8 sm:mb-0">
             <span
               ref={(el) => (counterRefs.current[index] = el)}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
             >
               0
             </span>
