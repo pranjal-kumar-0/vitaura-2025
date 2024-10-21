@@ -11,7 +11,7 @@ const ScrollAnimation = () => {
   const counters = [
     { value: 10, label: "Events" },
     { value: 5000, label: "Registrations" },
-    { value: 150000, label: "Prizes" },
+    { value: 120000, label: "Prizes" },
   ];
 
   useEffect(() => {
@@ -23,17 +23,16 @@ const ScrollAnimation = () => {
         pin: true,
         scrub: 2,
         pinSpacing: true,
+        markers: false, // Remove this line if you don't want to see ScrollTrigger markers
       },
     });
 
-    const smoothEase = gsap.parseEase("power4.out");
-    const animationDuration = 5; // Adjusted to balance timing for all counters
+    const animationDuration = 5;
     const startDelay = 1;
     const endPause = 2;
 
-    // Adjusted customIncrement function
     const customIncrement = (start, end, progress) => {
-      return start + (end - start) * progress; // Use progress directly for consistent growth
+      return start + (end - start) * progress;
     };
 
     tl.addLabel("startCounters", `+=${startDelay}`);
@@ -53,10 +52,11 @@ const ScrollAnimation = () => {
             const newValue = customIncrement(0, targetValue, this.progress());
 
             counterRefs.current[index].innerHTML = `
-            <span>${Math.ceil(newValue).toLocaleString()}</span>
-            <span class="-ml-14 bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text">+</span>
+            <span class="whitespace-nowrap">${Math.ceil(
+              newValue
+            ).toLocaleString()}</span>
+            <span class="ml-1 bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text">+</span>
           `;
-         // Format with commas
           },
         },
         "startCounters"
@@ -76,40 +76,22 @@ const ScrollAnimation = () => {
 
   return (
     <section
-      className="font-spacemono"
+      className="font-spacemono text-white bg-black text-center py-20 min-h-screen flex flex-col justify-center"
       ref={sectionRef}
-      style={{
-        color: "#fff",
-        backgroundColor: "#000",
-        textAlign: "center",
-        padding: "100px 0",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
     >
-      <h2
-        className="font-fluxbox bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-8xl"
-      >
+      <h2 className="font-fluxbox bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
         Event Highlights
       </h2>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          marginTop: "30px",
-        }}
-      >
+      <div className="flex flex-col sm:flex-row justify-around mt-8 sm:mt-12">
         {counters.map((counter, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-col items-center mb-8 sm:mb-0">
             <span
               ref={(el) => (counterRefs.current[index] = el)}
-              style={{ fontSize: "6rem", display: "block" }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
             >
               0
             </span>
-            <p style={{ fontSize: "1.5rem" }}>{counter.label}</p>
+            <p className="text-lg sm:text-xl mt-2">{counter.label}</p>
           </div>
         ))}
       </div>

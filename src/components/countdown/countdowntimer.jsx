@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const CountdownTimer = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
@@ -14,7 +14,9 @@ const CountdownTimer = ({ targetDate }) => {
       } else {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -25,29 +27,21 @@ const CountdownTimer = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="text-center">
+    <div className="text-center p-4 sm:p-6 md:p-8 lg:p-10">
       <h2
-        style={{
-          fontSize: '5.5em', // Increased heading size
-          background: 'linear-gradient(to right, #FF7B02, #FC4C05)',
-          WebkitBackgroundClip: 'text',
-          color: 'transparent',
-          fontFamily: 'fluxbox'
-        }}
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-fluxbox 
+                   bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent 
+                   bg-clip-text mb-4"
       >
         Time left for the event
       </h2>
       <div
-        style={{
-          fontSize: '5.5em', // Increased counter size
-          background: 'linear-gradient(to right, #F50062, #b700ba)',
-          WebkitBackgroundClip: 'text',
-          color: 'transparent',
-          fontFamily: 'spacemono', // Font for numbers
-        }}
-        className="mt-4"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-spacemono 
+                   bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent 
+                   bg-clip-text mt-4"
       >
-        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+        {timeLeft.seconds}s
       </div>
     </div>
   );
