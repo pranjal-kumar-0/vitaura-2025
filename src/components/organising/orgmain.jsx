@@ -18,9 +18,12 @@ export function TabsDemo() {
   ];
 
   return (
-
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-[90rem] mx-auto w-full  items-start justify-start mb-40 font-spacemono">
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-[90rem] mx-auto w-full mb-10  items-start justify-start  font-spacemono">
+      <div>
+        <h1 className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text text-8xl font-fluxbox mb-3">Organising Comitee</h1>
+      </div>
       <Tabs tabs={tabs} />
+      {/* mb-40 */}
     </div>
   );
 }
