@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "../acertui/ui/tabs";
 import Convenor from "./convenor";
 import Patrons from "./patron";
+import Copatrons from "./copatron";
 
 export function TabsDemo() {
   const tabs = [
@@ -10,6 +11,13 @@ export function TabsDemo() {
       value: "Patron",
       content: <Patrons />,
     },
+
+    {
+      title: "Co Patron",
+      value: "Co Patron",
+      content: <Copatrons />,
+    },
+
     {
       title: "Convenor",
       value: "Convenor",
