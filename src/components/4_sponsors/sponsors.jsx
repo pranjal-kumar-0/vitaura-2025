@@ -17,11 +17,11 @@ const SponsorsSection = () => {
     <section className="flex flex-col items-center pt-[15rem] w-full">
       <div className="mb-16 text-center">
         {/* Center the heading */}
-        <h1 className="font-fluxbox text-[7rem] font-extrabold mb-0 leading-[1.1]">
-          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-8xl">
+        <h1 className="font-fluxbox font-extrabold mb-0">
+          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl ">
             SPONSORED &
           </span>{" "}
-          <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-8xl">
+          <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl ">
             POWERED BY
           </span>
         </h1>
