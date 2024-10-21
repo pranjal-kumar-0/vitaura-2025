@@ -24,9 +24,9 @@ export function TabsDemo() {
   ];
 
   return (
-    <div className="hidden min-h-screen md:min-h-[0] md:relative md:flex md:flex-col md:max-w-[90rem] md:mx-auto md:w-full md:mb-[1000px] lg:mb-[700px] md:items-center md:justify-center md:font-spacemono">
+    <div className="px-5 lg:px-0 min-h-screen md:min-h-[0] relative flex flex-col max-w-[90rem] mx-auto w-full items-center justify-center font-spacemono">
       <div>
-        <h1 className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text text-5xl sm:text-8xl font-fluxbox mb-6">
+        <h1 className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text text-6xl md:text-8xl font-fluxbox mb-6">
           Organising Committee
         </h1>
       </div>
