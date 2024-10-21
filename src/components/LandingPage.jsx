@@ -7,7 +7,8 @@ import ScrollAnimation from "./timeline/scrollcount";
 import { MdArrowOutward } from "react-icons/md";
 import Footer from "./footer/footer"
 import TimeLine from "./timeline/fest-timeline"
-
+import { TabsDemo } from "./organising/orgmain"
+import video from "./video/video.mp4"
 
 const HeroSection = () => {
   return (
@@ -49,12 +50,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="https://dummyimage.com/720x820"
-            width="720"
-            height="820"
+          <video
+            src={video}
+            muted
+            autoPlay // Automatically starts playing the video
+            loop // Loops the video
+            className="w-full h-auto" // Makes sure the video is styled properly
           />
         </div>
       </div>
@@ -75,6 +76,7 @@ const LandingPageComponent = () => {
         {/* <NumbersSection /> */}
         <TimeLine />
         {/* <InfoSection /> */}
+        <TabsDemo/>
         <SponsorsSection />
         <Footer />
       </main>

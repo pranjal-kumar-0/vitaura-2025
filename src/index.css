@@ -4,13 +4,13 @@
 
 
 @font-face {
-    font-family: 'fluxbox';
-    src: url('../fonts//fluxbox.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  
+  font-family: 'fluxbox';
+  src: url('../fonts//fluxbox.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: 'spacemono';
   src: url('../fonts//spacemono.ttf') format('truetype');
