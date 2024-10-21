@@ -1,7 +1,8 @@
-
-import './App.css';
-import LandingPage from './components/LandingPage';
-
+import "./App.css";
+import LandingPage from "./components/LandingPage";
+import gsap from "gsap";
+import Loader from "./Loader/Loader";
+import { useState, useEffect } from "react";
 
 function App() {
   const timeline = gsap.timeline();
@@ -17,8 +18,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <LandingPage />
+    <div className="App dark-theme">
+      {" "}
+      {/* Ensuring the whole app stays dark */}
+      {isLoading && <Loader timeline={timeline} />}{" "}
+      {/* Show loader only when loading */}
+      {!isLoading && <LandingPage />} Show content only after animation
     </div>
   );
 }

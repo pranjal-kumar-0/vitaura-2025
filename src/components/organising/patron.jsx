@@ -10,13 +10,13 @@ import "./org.css";
 
 const Patrons = () => {
   return (
-    <div className="bg-black rounded-xl">
+    <div className="bg-black rounded-xl p-6 sm:p-8">
       <div>
-        <h1 className="text-left pl-8 mb-5 text-5xl font-fluxbox text-white">
+        <h1 className="text-left pl-4 sm:pl-8 mb-5 text-3xl sm:text-4xl font-fluxbox text-white">
           Patron
         </h1>
       </div>
-      <div className="wrapper">
+      <div className="wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div className="card">
           <div className="poster">
             <img src={vc} alt="Patron 3" />
@@ -24,15 +24,8 @@ const Patrons = () => {
           <div className="details">
             <h1 className="font-spacemono">Dr. S. V. Kota Reddy</h1>
             <h2 className="font-spacemono">Vice Chancellor</h2>
-            <p
-              className="desc"
-              style={{ fontFamily: "'Quicksand', sans-serif" }}
-            >
-              {/* <img src={qrCodeImage} alt="QR code" /> */}
-            </p>
           </div>
         </div>
-
         <div className="card">
           <div className="poster">
             <img src={registrar} alt="Patron 4" />
@@ -40,15 +33,8 @@ const Patrons = () => {
           <div className="details">
             <h1 className="font-spacemono">Dr. Jagadish Chandra Dhandapani</h1>
             <h2 className="font-spacemono">Registrar</h2>
-            <p
-              className="desc"
-              style={{ fontFamily: "'Quicksand', sans-serif" }}
-            >
-              {/* <img src={qrCodeImage} alt="QR code" /> */}
-            </p>
           </div>
         </div>
-
         <div className="card">
           <div className="poster">
             <img src={sudhakar} alt="Patron 1" />
@@ -56,48 +42,8 @@ const Patrons = () => {
           <div className="details">
             <h1 className="font-spacemono">Dr. S. Sudhakar Ilango</h1>
             <h2 className="font-spacemono">Dean SCOPE</h2>
-            <p
-              className="desc"
-              style={{ fontFamily: "'Quicksand', sans-serif" }}
-            >
-              {/* <img src={qrCodeImage} alt="QR code" /> */}
-            </p>
           </div>
         </div>
-
-        {/* <div className="card">
-        <div className="poster">
-          <img src={mocktailsImage} alt="Mocktails image" />
-        </div>
-        <div className="details">
-          <h1 className="font-spacemono">
-            Mocktail Menu
-          </h1>
-          <h2 className="font-spacemono">
-            Individual - From ₹100
-          </h2>
-          <p className="desc" style={{ fontFamily: "'Quicksand', sans-serif" }}>
-            <img src={qrCodeImage} alt="QR code" />
-          </p>
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="poster">
-          <img src={dessertsImage} alt="Desserts image" />
-        </div>
-        <div className="details">
-          <h1 className="font-spacemono">
-            Desserts Menu
-          </h1>
-          <h2 className="font-spacemono">
-            Complimentary - Included in Buffet
-          </h2>
-          <p className="desc" style={{ fontFamily: "'Quicksand', sans-serif" }}>
-            <img src={qrCodeImage} alt="QR code" />
-          </p>
-        </div>
-      </div> */}
       </div>
     </div>
   );
