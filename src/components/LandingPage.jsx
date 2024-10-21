@@ -43,10 +43,15 @@ const HeroSection = () => {
             Join the Biggest Tech Fest ever at VIT-AP
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out">
+            <a
+              href="https://form.jotform.com/242935077952062"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out"
+            >
               Register Now
               <MdArrowOutward className="ml-2" />
-            </button>
+            </a>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
