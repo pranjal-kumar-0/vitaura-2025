@@ -1,36 +1,45 @@
-import React from 'react';
-import img1 from '../../images/finalfinal.png'
+import React from "react";
+import img1 from "../../images/finalfinal.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
     <header className="text-[#fff] body-font bg-black fixed bg-opacity-10 top-0 w-full z-[10000000] backdrop-blur-lg">
-      <div className="container mx-auto flex flex-wrap  flex-col md:flex-row items-center z-[10000000] p-1">
+      <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center z-[10000000] p-1">
         <img src={img1} alt="" className="w-[250px]" />
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a
-            href="#"
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
-            Events
-          </a>
-          <a
-            href="#"
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
+            Highlights
+          </Link>
+          <Link
+            to="timeline"
+            smooth={true}
+            duration={500}
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
-            About
-          </a>
-          <a
-            href="#"
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
+            Timeline
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             Contact
-          </a>
+          </Link>
         </nav>
         <a
           href="https://form.jotform.com/242935077952062"
