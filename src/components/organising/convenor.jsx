@@ -44,7 +44,7 @@ const Convenor = () => {
               Abhinav Pentani
             </h1>
             <h2 className="font-spacemono">
-              Convener VITAURA'24 <br /> Club Advisor - Entreprenership Club
+              Convener VITAURA'24 <br /> Club Advisor - Entrepreneurship Club
             </h2>
             <p
               className="desc"
