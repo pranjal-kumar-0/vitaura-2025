@@ -11,6 +11,24 @@
     overflow: hidden;
     z-index: 2;
 
+    &__fade-out {
+        opacity: 0;
+        /* Fade out effect */
+        transition: opacity 1s ease;
+        /* Smooth transition over 1 second */
+        pointer-events: none;
+        /* Disable interactions when fading out */
+    }
+
+    &__slide-out {
+        transform: translateY(-100%);
+        /* Slide out effect */
+        transition: transform 1s ease;
+        /* Smooth slide transition */
+        pointer-events: none;
+        /* Disable interactions */
+    }
+
     &__wrapper {
         position: relative;
         height: 100%;
@@ -93,3 +111,8 @@
     }
 }
 
+.loader__fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}

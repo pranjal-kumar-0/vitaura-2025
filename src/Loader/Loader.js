@@ -1,24 +1,42 @@
+import React, { useEffect, useRef, useState } from "react";
 import { words } from "./data";
 import styles from "./Loader.module.scss";
 import { introAnimation, collapseWords, progressAnimation } from "./animation";
-import React, { useEffect, useRef } from "react";
 
 const Loader = ({ timeline }) => {
   const loaderRef = useRef(null);
   const progressRef = useRef(null);
   const progressNumberRef = useRef(null);
   const wordGroupsRef = useRef(null);
+  const [isAnimationComplete, setAnimationComplete] = useState(false); // Add state
 
   useEffect(() => {
-    timeline &&
+    if (timeline) {
       timeline
         .add(introAnimation(wordGroupsRef))
         .add(progressAnimation(progressRef, progressNumberRef), 0)
-        .add(collapseWords(loaderRef), "-=1");
+        .add(collapseWords(loaderRef), "-=1")
+        .then(() => {
+          setAnimationComplete(true); // Set to true when the animation finishes
+        });
+    }
   }, [timeline]);
 
+  useEffect(() => {
+    if (isAnimationComplete) {
+      // Fade out and then remove the loader from the DOM
+      setTimeout(() => {
+        loaderRef.current.style.display = "none";
+      }, 1000); // Wait for 1 second for the fade-out to complete
+    }
+  }, [isAnimationComplete]);
+
   return (
-    <div className={styles.loader__wrapper}>
+    <div
+      className={`${styles.loader__wrapper} ${
+        isAnimationComplete ? styles.loader__fadeOut : ""
+      }`} // Apply fade-out class when animation is complete
+    >
       <div className={styles.loader__progressWrapper}>
         <div className={styles.loader__progress} ref={progressRef}></div>
         <span className={styles.loader__progressNumber} ref={progressNumberRef}>
