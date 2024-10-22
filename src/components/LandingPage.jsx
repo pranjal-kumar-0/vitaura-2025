@@ -79,7 +79,7 @@ const LandingPageComponent = () => {
         <section id="about">
           <ScrollAnimation />
         </section>
-          <ExpandableCardDemo />
+          {/* <ExpandableCardDemo /> */}
         {/* <NumbersSection /> */}
         <section id="timeline">
           <TimeLine />
