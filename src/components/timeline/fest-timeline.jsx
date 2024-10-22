@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import "./style.css";
 
 const Timeline = () => {
-  const timelineRef = useRef(null); // Reference to timeline
-  const lineRef = useRef(null); // Reference to timeline line
-  const sectionsRef = useRef([]); // References to all sections
+  const timelineRef = useRef(null);
+  const lineRef = useRef(null);
+  const sectionsRef = useRef([]);
 
   useEffect(() => {
     const line = lineRef.current;
@@ -18,20 +18,14 @@ const Timeline = () => {
       const dist = targetY - timelineRect.top;
 
       if (!full) {
-        // Calculate the percentage of the timeline that is visible
         const timelineHeight = timeline.offsetHeight;
         const visiblePercentage = Math.min((dist / timelineHeight) * 100, 100);
-
-        // Set the height of the line based on scroll
         line.style.height = `${visiblePercentage}%`;
-
-        // Once the user scrolls past the entire timeline, stop increasing the line
         if (visiblePercentage >= 100) {
           full = true;
         }
       }
 
-      // Show sections progressively as they come into view
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top + section.offsetHeight / 5 < targetY) {
@@ -40,7 +34,7 @@ const Timeline = () => {
       });
     }
 
-    line.style.height = "0%"; // Initially set the line height to 0%
+    line.style.height = "0%";
     window.addEventListener("scroll", scrollHandler);
 
     return () => {
@@ -51,14 +45,15 @@ const Timeline = () => {
   return (
     <div style={{ color: "aquamarine" }} className="overflow-x-hidden">
       <div className="timeline_container" ref={timelineRef}>
-        <div className="timeline_top-section ">
+        <div className="timeline_top-section">
           <h1
             style={{
               fontSize: '2.75em',
               background: 'linear-gradient(to right, #F50062, #b700ba)',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
-              fontFamily: 'fluxbox, sans-serif'
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: '600',
             }}
           >
             Event Timeline
@@ -66,7 +61,8 @@ const Timeline = () => {
           <p
             style={{
               color: 'white',
-              fontFamily: 'fluxbox, sans-serif'
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '1.2em',
             }}
           >
             Explore the exciting events lined up for the Tech Fest! Below is a
@@ -87,9 +83,8 @@ const Timeline = () => {
             { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to investors.", venue: "Newton Hall" },
             { date: "27th October", time: "10:00AM - 11:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC" },
             { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC" },
-            { date: "26th October", time: "16:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
+            { date: "26th October", time: "6:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
             { date: "27th October", time: "4:00PM - 7:30PM", event: "Cultural", venue: "AB2- Auditorium" },
-            
           ].map((event, index) => (
             <div
               key={index}
@@ -101,10 +96,11 @@ const Timeline = () => {
                 <h2
                   style={{
                     fontSize: '1.5em',
-                    fontFamily: 'spacemono, monospace', // Font for date
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: '500',
                     background: 'linear-gradient(to right, #F50062, #b700ba)',
                     WebkitBackgroundClip: 'text',
-                    color: 'transparent'
+                    color: 'transparent',
                   }}
                 >
                   {event.date}
@@ -112,10 +108,11 @@ const Timeline = () => {
                 <h3
                   style={{
                     fontSize: '1.2em',
-                    fontFamily: 'spacemono, monospace', // Font for time
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: '400',
                     background: 'linear-gradient(to right, #F50062, #b700ba)',
                     WebkitBackgroundClip: 'text',
-                    color: 'transparent'
+                    color: 'transparent',
                   }}
                 >
                   {event.time}
@@ -123,11 +120,21 @@ const Timeline = () => {
                 <p
                   style={{
                     color: 'white',
-                    fontFamily: 'fluxbox, sans-serif', // Font for text
-                    display: 'inline' // Keep event.event and venue in a single line
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '1.1em',
                   }}
                 >
-                  {event.event} <br/>Venue: {event.venue}
+                  <strong>{event.event}</strong>
+                </p>
+                <p
+                  style={{
+                    color: 'lightgray',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '1em',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  Venue: {event.venue}
                 </p>
               </div>
             </div>
