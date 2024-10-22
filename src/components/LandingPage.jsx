@@ -1,14 +1,14 @@
-import React from 'react';
-import Navbar from './navbar/navbar';
+import React from "react";
+import Navbar from "./navbar/navbar";
 // import InfoSection from './3_Info/infoSection';
-import SponsorsSection from './4_sponsors/sponsors';
-import CountdownTimer from './countdown/countdowntimer';
+import SponsorsSection from "./4_sponsors/sponsors";
+import CountdownTimer from "./countdown/countdowntimer";
 import ScrollAnimation from "./timeline/scrollcount";
 import { MdArrowOutward } from "react-icons/md";
-import Footer from "./footer/footer"
-import TimeLine from "./timeline/fest-timeline"
-import { TabsDemo } from "./organising/orgmain"
-import video from "./video/video.mp4"
+import Footer from "./footer/footer";
+import TimeLine from "./timeline/fest-timeline";
+import { TabsDemo } from "./organising/orgmain";
+import video from "./video/video.mp4";
 
 const HeroSection = () => {
   return (
@@ -62,23 +62,32 @@ const HeroSection = () => {
   );
 };
 
-
 const LandingPageComponent = () => {
-  const targetDate = new Date('2024-10-28T08:00:00');
+  const targetDate = new Date("2024-10-28T08:00:00");
   return (
     <div>
       <Navbar />
       <main>
         <div className="mt-10"></div>
-        <HeroSection />
+        <section id="home">
+          <HeroSection />
+        </section>
+
         <CountdownTimer targetDate={targetDate} />
-        <ScrollAnimation />
+
+        <section id="about">
+          <ScrollAnimation />
+        </section>
         {/* <NumbersSection /> */}
-        <TimeLine />
+        <section id="timeline">
+          <TimeLine />
+        </section>
         {/* <InfoSection /> */}
-        <TabsDemo/>
+        <TabsDemo />
         <SponsorsSection />
-        <Footer />
+        <footer id="contact">
+          <Footer />
+        </footer>
       </main>
     </div>
   );
