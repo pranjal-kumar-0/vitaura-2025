@@ -44,7 +44,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center">
             <a
-              href="https://form.jotform.com/242935077952062"
+              href="https://forms.gle/DrtFoAnpLCAYtk2v5"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out"

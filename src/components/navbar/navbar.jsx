@@ -12,7 +12,7 @@ const Navbar = () => {
             to="hero"
             smooth={true}
             duration={500}
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox cursor-pointer"
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             Home
           </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox cursor-pointer"
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             About
           </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox cursor-pointer"
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             Contact
           </Link>
