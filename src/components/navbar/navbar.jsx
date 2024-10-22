@@ -1,6 +1,7 @@
 import React from "react";
 import img1 from "../../images/finalfinal.png";
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"; // For scrolling within the page
+import { Link as RouterLink } from "react-router-dom"; // For navigation between pages
 
 const Navbar = () => {
   return (
@@ -40,6 +41,13 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          {/* Changed Merchandise Link to RouterLink */}
+          <RouterLink
+            to="/merchandise"
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+          >
+            Merchandise
+          </RouterLink>
         </nav>
         <a
           href="https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59"

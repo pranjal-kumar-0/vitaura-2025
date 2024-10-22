@@ -1,8 +1,10 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage";
-import gsap from "gsap";
+import Merchandise from "./components/merchandise/merchandise"; // Import the Merchandise component
 import Loader from "./Loader/Loader";
+import gsap from "gsap";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import React Router
 
 function App() {
   const timeline = gsap.timeline();
@@ -18,13 +20,21 @@ function App() {
   }, []);
 
   return (
-    <div className="App dark-theme">
-      {" "}
-      {/* Ensuring the whole app stays dark */}
-      {isLoading && <Loader timeline={timeline} />}{" "}
-      {/* Show loader only when loading */}
-      {!isLoading && <LandingPage />} Show content only after animation
-    </div>
+    <Router> {/* Wrap your app with Router */}
+      <div className="App dark-theme">
+        {/* Show loader only when loading */}
+        {isLoading && <Loader timeline={timeline} />}
+        
+        {/* When not loading, display the routed pages */}
+        {!isLoading && (
+          <Routes>
+            <Route path="/" element={<LandingPage />} /> {/* Your landing page */}
+            <Route path="/merchandise" element={<Merchandise />} /> {/* Your merchandise page */}
+            {/* Add other routes as needed */}
+          </Routes>
+        )}
+      </div>
+    </Router>
   );
 }
 

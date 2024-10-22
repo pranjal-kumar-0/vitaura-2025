@@ -1,11 +1,10 @@
 import React from "react";
 
-
 const TshirtGallery = () => {
   // Array of t-shirt image data
   const tshirtData = [
     {
-      img: "Virtualthreads.png", // Use absolute paths for public folder
+      img: "Virtualthreads.png",
       title: "Virtual Threads T-Shirt 1",
       price: "$25",
     },
@@ -20,7 +19,6 @@ const TshirtGallery = () => {
       price: "$35",
     },
   ];
-  
 
   return (
     <div className="tshirt-gallery min-h-screen bg-black flex flex-col items-center text-center font-fluxbox py-10">
@@ -35,9 +33,17 @@ const TshirtGallery = () => {
             />
             <h3 className="text-xl text-white font-semibold mb-2">{tshirt.title}</h3>
             <p className="text-lg text-gray-400 mb-4">{tshirt.price}</p>
-            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
-              Buy Now
-            </button>
+            
+            {/* Updated button with link to Google Form */}
+            <a
+              href="https://forms.gle/RjDrJkKkwWVG52Hr6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                Buy Now
+              </button>
+            </a>
           </div>
         ))}
       </div>

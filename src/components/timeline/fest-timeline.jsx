@@ -79,14 +79,14 @@ const Timeline = () => {
           <div className="timeline__line" ref={lineRef}></div>
 
           {[
-            { date: "27th-28th October", time: "8PM - 8AM", event: "Hackathon - Solve challenges overnight!", venue: "IIEC" },
-            { date: "28th October", time: "9AM - 1PM", event: "Founders Pitch - Present your innovative startup ideas.", venue: "IIEC Cabin" },
-            { date: "28th October", time: "10:30AM - 1:30PM", event: "CTF - Test your cybersecurity skills!", venue: "IIEC Cabin" },
-            { date: "28th October", time: "11AM - 1PM", event: "Mind Maze - A test of wit and intellect.", venue: "GO2, AB1" },
+            { date: "26th-27th October", time: "8:00PM - 8:00AM", event: "HackAura - Solve challenges overnight!", venue: "IIEC" },
+            { date: "26th October", time: "9:00AM - 1:00PM", event: "Open Founder's Pitch - Present your innovative startup ideas.", venue: "Moot Court" },
+            { date: "28th October", time: "10:30AM - 1:30PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "Newton Hall" },
+            { date: "28th October", time: "11AM - 1PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB, G09 and G20" },
             { date: "28th October", time: "2PM - 4PM", event: "Start-up Pitch - Pitch your startup ideas to investors.", venue: "IIEC Cabin" },
             { date: "28th October", time: "2PM - 4PM", event: "BBH - Battle of Business Hustlers.", venue: "GO2, AB1" },
-            { date: "28th October", time: "2PM - 7PM", event: "Gaming Arena - Show your gaming skills!", venue: "GO2, AB1" },
-            { date: "28th October", time: "4:30PM - 7PM", event: "Optibyte - Programming challenge.", venue: "GO2, AB1" },
+            { date: "28th October", time: "2PM - 7PM", event: "Gaming Arena - Show your gaming skills!", venue: "AB1" },
+            { date: "28th October", time: "4:30PM - 7PM", event: "Optibyte - Programming challenge.", venue: "AB2" },
           ].map((event, index) => (
             <div
               key={index}
