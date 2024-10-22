@@ -3,6 +3,7 @@ import { Tabs } from "../acertui/ui/tabs";
 import Convenor from "./convenor";
 import Patrons from "./patron";
 import Copatrons from "./copatron";
+import Tech from "./tech";
 
 export function TabsDemo() {
   const tabs = [
@@ -21,11 +22,11 @@ export function TabsDemo() {
       value: "Convenor",
       content: <Convenor />,
     },
-    // {
-    //   title: "Tech Team",
-    //   value: "Convenor",
-    //   content: <Convenor />,
-    // },
+    {
+      title: "Technical Team",
+      value: "Tech",
+      content: <Tech />,
+    },
   ];
 
   return (
