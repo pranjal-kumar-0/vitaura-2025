@@ -2,6 +2,16 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "./use-outside-click";
+import hackathon from "./events/Hackthon.png";
+import founder from "./events/osc.png";
+import osc from "./events/cyber security.png";
+import bug from "./events/Founder pitch.png";
+import gaming from "./events/Gaming.png";
+import startup from "./events/Start up pitch.png";
+import ctf from "./events/Capture the flag.png";
+import optibyte from "./events/Opibyte.png";
+import mindmaze from "./events/Mind Maze.png";
+import cultural from "./events/Cultural.png";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState(null);
@@ -29,6 +39,8 @@ export function ExpandableCardDemo() {
 
   return (
     <>
+      <h2 className="mb-8 text-7xl bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text font-fluxbox">Events</h2>
+
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -123,41 +135,41 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {cards.map((card, index) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-4 flex-col w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                {/* Replaced next/image with a standard img tag */}
-                <img
-                  src={card.src}
-                  alt={card.title}
-                  className="h-60 w-full rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
-                >
-                  {card.description}
-                </motion.p>
-              </div>
+      <ul className="w-full grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 mx-auto">
+      {cards.map((card, index) => (
+        <motion.div
+          layoutId={`card-${card.title}-${id}`}
+          key={card.title}
+          onClick={() => setActive(card)}
+          className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer max-w-[180px] mx-auto" // reduced max width
+        >
+          <div className="flex gap-4 flex-col w-full">
+            <motion.div layoutId={`image-${card.title}-${id}`} className="aspect-[4/3] w-full">
+              <img
+                src={card.src}
+                alt={card.title}
+                className="h-full w-full rounded-lg object-cover object-top"
+              />
+            </motion.div>
+            <div className="flex justify-center items-center flex-col">
+              <motion.h3
+                layoutId={`title-${card.title}-${id}`}
+                className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-sm" // reduced font size
+              >
+                {card.title}
+              </motion.h3>
+              <motion.p
+                layoutId={`description-${card.description}-${id}`}
+                className="text-neutral-600 dark:text-neutral-400 text-center text-sm" // reduced font size
+              >
+                {card.description}
+              </motion.p>
             </div>
-          </motion.div>
-        ))}
-      </ul>
+          </div>
+        </motion.div>
+      ))}
+    </ul>
+
     </>
   );
 }
@@ -197,72 +209,204 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Solve Challenges",
+    title: "Hackaura",
+    src: hackathon,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
     content: () => {
       return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br />Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br />His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+        <p style={{ textAlign: "left" }}>
+          Join us for a 12-hour hackathon where teams solve real-world challenges
+          in Health, Cyber Security, Fintech, Industries, and Aerospace. Work with
+          mentors to develop innovative solutions and compete in a fair, 2-level
+          judged competition. Showcase your skills, collaborate with peers, and win
+          exciting prizes! This is your chance to turn ideas into impactful tech solutions.
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Present your innovative startup ideas",
+    title: "Founder's Pitch",
+    src: founder,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
     content: () => {
       return (
-        <p>
-          Metallica, one of the most iconic heavy metal bands of all time, was
-          formed in 1981 in Los Angeles, California. The band, consisting of
-          members James Hetfield, Lars Ulrich, Kirk Hammett, and Robert Trujillo
-          (formerly Cliff Burton and Jason Newsted), has had an indelible impact
-          on the world of music. <br /> <br />Known for their aggressive sound
-          and virtuosic instrumental performances, Metallica's music is
-          characterized by complex rhythms, powerful vocals, and intricate
-          guitar work. Over their career, they have released multiple
-          groundbreaking albums, with songs like "Master of Puppets" and
-          "Enter Sandman" becoming anthems for metal fans around the world.
+        <p style={{ textAlign: "left" }}>
+          “Founder's Pitch” is an exciting competition where contestants are 
+          assigned a company beforehand and must step into the shoes of a founder.
+          They will face a series of questions and real-world scenarios designed to
+          test their decision-making, problem-solving, and leadership skills across
+          various business challenges. Contestants will be evaluated on their strategic
+          thinking, adaptability, and overall approach to running the company.
         </p>
       );
     },
   },
+
+  {
+    description: "Join the challenge",
+    title: "Open Source Competition",
+    src: osc,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          The VITAURA Week of Code: Open Source Competition gives developers
+          a chance to show their work on open-source projects. Participants
+          present their projects, explain challenges they faced, and can choose
+          to give a live demo. Judges score based on technical skill, creativity,
+          teamwork, and overall contribution to the open-source community.
+          The event celebrates collaboration in open-source development,
+          with feedback provided and top projects awarded.
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Find the bugs",
+    title: "Bug Bounty - Debugging",
+    src: bug,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          The Bug Bounty Hunt will be a competition where participants review code,
+          applications, or websites to identify errors, vulnerabilities, or logical bugs
+          Participants will be challenged to find and report issues in a limited time,
+          earning points based on the number and severity of bugs discovered.
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Show you gaming skills",
+    title: "Gaming Arena",
+    src: gaming,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          TGC Battlegrounds Tournament - Compete in BGMI, Valorant, Free Fire,
+          and COD Mobile! Join the action, test your skills, and battle for glory!
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Pitch your startup ideas to investors",
+    title: "Start-up Pitch",
+    src: startup,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          Bring your innovative ideas to life at VITAURA's Start Up pitch!
+          Prepare a concise pitch deck with a maximum of 6-7 slides that highlights
+          your concept, business model, and market strategy. While a prototype
+          is encouraged to showcase the feasibility of your solution, it is not mandatory.
+          Impress the panel with your vision and get one step closer to turning your
+          idea into reality.
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Test your cybersecurity skills",
+    title: "Capture the Flag",
+    src: ctf,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          Test your skills across domains like Cryptography, Networking,
+          Web Exploitation, and more in this 3-hour competition.
+          Solve 21 challenges, released hourly, and earn points based on difficulty.
+          Teams of up to 3 members will compete, with a live leaderboard
+          tracking the top performers. Show your expertise and claim victory!
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Code Optimization",
+    title: "Opti-Byte",
+    src: optibyte,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          The competition will consist of code optimization challenges,
+          where participants are required to improve code efficiency,
+          fix bugs, and enhance the architecture.
+          The provided code may contain inaccuracies, poor structure
+          or bugs, which participants are expected to resolve all the 
+          problems in a span of 1.5 hours.
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "A test of wit and intellect",
+    title: "Mind Maze",
+    src: mindmaze,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          Mind Maze is an exciting event designed to test participants'
+          problem-solving and analytical skills through a variety of challenges.
+          It features thought-provoking puzzles that require logical reasoning
+          to piece together clues and reach a solution.
+          Additionally, participants will tackle aptitude questions
+          that assess general knowledge and reasoning abilities.
+          The aptitude round will be conducted on HackerRank, offering a competitive
+          platform to showcase problem-solving expertise. Join us in navigating
+          this maze of engaging and skill-enhancing challenges!
+        </p>
+      );
+    },
+  },
+
+  {
+    description: "Get ready to get entertained",
+    title: "Cultural Event",
+    src: cultural,
+    ctaText: "Register Now",
+    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    content: () => {
+      return (
+        <p style={{ textAlign: "left" }}>
+          Aurelia is the ultimate stage at VITAURA'24 where raw talent
+          meets electrifying performances! Whether you're a dancer with
+          moves that mesmerize, a singer who hits every note, a rapper with
+          rhymes that ignite, a dramatist who brings stories to life, or an
+          artist of any other kind—this is your moment to step into
+          the spotlight. From heart-pounding beats to soul-stirring performances,
+          this event is all about embracing the diverse and vibrant talent within
+          the VIT community. And it's not just about applause—it's about winning too!
+          With a fantastic prize pool awaiting the top performers, the stakes are high,
+          and the stage is set for unforgettable moments. So bring your passion,
+          bring your energy, and get ready to leave the audience in awe at Aurelia!
+        </p>
+      );
+    },
+  },
+  
 ];
