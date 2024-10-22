@@ -35,7 +35,7 @@ const HeroSection = () => {
               {/* Right white side with 'Coming Soon' text */}
               <div className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-white flex items-center justify-center px-[57px] py-2 md:px-6 md:py-[16px] rounded-b-lg sm:rounded-r-lg sm:rounded-bl-none group-hover:bg-gradient-to-r group-hover:from-[#fff] group-hover:to-[#fff] group-hover:text-black transition duration-1000 ease-in-out">
                 <span className="text-lg sm:text-xl font-bold font-spacemono">
-                  28th Oct'24
+                  26th Oct'24
                 </span>
               </div>
             </div>
@@ -45,7 +45,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center">
             <a
-              href="https://forms.gle/DrtFoAnpLCAYtk2v5"
+              href="https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out"

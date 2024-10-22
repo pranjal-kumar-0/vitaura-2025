@@ -1,145 +1,49 @@
-import React from 'react';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
-import './footer.css'; // Ensure the CSS file path is correct
-import logo from '../../images/finalfinal.png'; // Import your logo
-import ecell from '../../images/logo-for-ec-without-background-white-1@2x.png'
-import uniquest from '../../images/uniquest-removebg-preview.png'
-
+import React from "react";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import "./footer.css"; // Ensure the CSS file path is correct
+import logo from "../../images/finalfinal.png"; // Import your logo
 
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-gray-400 py-10" id="footer">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between">
-        {/* Left Column */}
-        <div className="footer-column mb-2 md:mb-0 px-5 md:px-0">
-          <div className="l-logo mb-4">
-            <img src={uniquest} alt="Uniquest" className="uniquest-logo" />{" "}
-            {/* Add class "uniquest-logo" */}
-          </div>
-          <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a
-              href="https://www.linkedin.com/company/uni-quest/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaLinkedin size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/uniquest_vitap/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaInstagram size={30} />
-            </a>
-          </div>
-          <div className="footer-contact mb-4 text-left">
-            <p className="text-sm">
-              Contact Us:{" "}
-              <a
-                href="mailto:uniquest.club@vitap.ac.in"
-                className="text-[#ff9500] hover:text-white"
-              >
-                uniquest.club@vitap.ac.in
-              </a>
-            </p>
-          </div>
-          <div className="footer-rights text-left text-sm">
-            <p className="font-spacemono">
-              © 2024 Uniquest Club VIT-AP. All Rights Reserved.
-            </p>
-          </div>
-        </div>
+    <footer className="mt-10 text-gray-200 body-font bg-stone-900">
+      <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+        {/* Logo Only */}
+        <a className="flex items-center md:justify-start justify-center">
+          <img src={logo} alt="VITAURA'24 Logo" className="w-52" />{" "}
+          {/* Ensuring aspect ratio */}
+        </a>
 
-        {/* Center Column */}
-        <div className="footer-column mb-8 md:mb-0 px-5 md:px-0">
-          <div className="footer-logo mb-8">
-            <img src={logo} alt="VITAURA'24 Logo" /> {/* Use actual logo */}
-          </div>
-          <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a
-              href="https://www.linkedin.com/company/vitaura-24"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaLinkedin size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/vitap.vitaura/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaInstagram size={30} />
-            </a>
-          </div>
-          <div className="footer-contact mb-4 text-left">
-            <p className="text-sm">
-              Contact Us:{" "}
-              <a
-                href="mailto:contact@vitaura24.com"
-                className="text-[#ff9500] hover:text-white"
-              >
-                contact@vitaura24.com
-              </a>
-            </p>
-          </div>
-          <div className="footer-rights text-left text-sm">
-            <p className="font-spacemono">
-              © 2024 VITAURA-24. All Rights Reserved.
-            </p>
-          </div>
-        </div>
+        {/* Copyright Section */}
+        <p className=" bg-gradient-to-r from-[#F50062] to-[#b700ba] font-bold text-transparent bg-clip-text text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 font-spacemono">
+          VITAURA© 2024 —
+          <a
+            href="mailto:contact@vitaura24.com"
+            className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text ml-1 font-spacemono"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            contact@vitaura24.com
+          </a>
+        </p>
 
-        {/* Right Column */}
-        <div className="footer-column mb-8 md:mb-0 px-5 md:px-0">
-          <div className="r-logo mb-6">
-            <img src={ecell} alt="ECell Logo" className="ecell-logo" />{" "}
-            {/* Add class "ecell-logo" */}
-          </div>
-          <div className="footer-social mb-4 flex space-x-4 text-left">
-            <a
-              href="https://www.linkedin.com/company/entrepreneurship-club-vit-ap/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaLinkedin size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/entrepreneurshipclub_vitap/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <FaInstagram size={30} />
-            </a>
-          </div>
-          <div className="footer-contact mb-4 text-left">
-            <p className="text-sm">Contact Us:</p>
-            <p className="text-sm">
-              <a
-                href="mailto:entrepreneurship.club@vitap.ac.in"
-                className="text-[#ff9500] hover:text-white"
-              >
-                entrepreneurship.club@vitap.ac.in
-              </a>
-            </p>
-          </div>
-          <div className="footer-rights text-left text-sm">
-            <p className="font-spacemono">
-              © 2024 Entrepreneurship Club VIT-AP.
-            </p>
-            <p className="font-spacemono">All Rights Reserved.</p>
-          </div>
-        </div>
+        {/* Social Media Icons */}
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a
+            href="https://www.linkedin.com/company/vitaura-24"
+            className="text-gray-500 hover:text-gray-700"
+          >
+            <FaLinkedin size={20} />
+          </a>
+          <a
+            href="https://www.instagram.com/vitap.vitaura/"
+            className="ml-3 text-gray-500 hover:text-gray-700"
+          >
+            <FaInstagram size={20} />
+          </a>
+        </span>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-// updating the footer.jsx file

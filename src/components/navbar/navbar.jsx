@@ -1,6 +1,7 @@
 import React from "react";
 import img1 from "../../images/finalfinal.png";
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"; // For scrolling within the page
+import { Link as RouterLink } from "react-router-dom"; // For navigation between pages
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="about"
+            to="timeline"
             smooth={true}
             duration={500}
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
@@ -30,7 +31,7 @@ const Navbar = () => {
             duration={500}
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
-            About
+            Highlights
           </Link>
           <Link
             to="contact"
@@ -40,9 +41,16 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          {/* Changed Merchandise Link to RouterLink */}
+          <RouterLink
+            to="/merchandise"
+            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+          >
+            Merchandise
+          </RouterLink>
         </nav>
         <a
-          href="https://forms.gle/DrtFoAnpLCAYtk2v5"
+          href="https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center bg-gradient-to-r from-[#F50062] to-[#b700ba] border-0 py-2 px-4 focus:outline-none rounded-full text-white mt-4 md:mt-0 font-fluxbox text-[14px] transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_#F50062] hover:scale-105"
