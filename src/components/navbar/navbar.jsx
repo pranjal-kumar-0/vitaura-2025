@@ -18,7 +18,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="about"
+            to="timeline"
             smooth={true}
             duration={500}
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
@@ -31,7 +31,7 @@ const Navbar = () => {
             duration={500}
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
-            About
+            Highlights
           </Link>
           <Link
             to="contact"
