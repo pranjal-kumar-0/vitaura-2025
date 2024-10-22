@@ -19,11 +19,10 @@ const SponsorsSection = () => {
         {/* Center the heading */}
         <h1 className="font-fluxbox font-extrabold mb-0">
           <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl ">
-            SPONSORED &
+            POWERED
           </span>
           <span className="text-3xl lg:text-8xl md:text-5xl"> </span>
-          <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl ">
-            POWERED BY
+          <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl "> BY
           </span>
         </h1>
       </div>
