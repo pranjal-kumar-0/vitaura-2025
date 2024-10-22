@@ -141,3 +141,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// updating the footer.jsx file
