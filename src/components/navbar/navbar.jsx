@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
         </nav>
         <a
-          href="https://form.jotform.com/242935077952062"
+          href="https://forms.gle/DrtFoAnpLCAYtk2v5"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center bg-gradient-to-r from-[#F50062] to-[#b700ba] border-0 py-2 px-4 focus:outline-none rounded-full text-white mt-4 md:mt-0 font-fluxbox text-[14px] transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_#F50062] hover:scale-105"

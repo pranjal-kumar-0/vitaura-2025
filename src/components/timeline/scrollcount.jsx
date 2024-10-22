@@ -55,7 +55,7 @@ const ScrollAnimation = () => {
             <span class="whitespace-nowrap">${Math.ceil(
               newValue
             ).toLocaleString()}</span>
-            <span class="ml-1 bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text">+</span>
+            <span class="-ml-2 bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text">+</span>
           `;
           },
         },
