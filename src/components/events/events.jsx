@@ -213,7 +213,7 @@ const cards = [
     title: "Hackaura",
     src: hackathon,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -232,7 +232,7 @@ const cards = [
     title: "Founder's Pitch",
     src: founder,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -252,7 +252,7 @@ const cards = [
     title: "Open Source Competition",
     src: osc,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -273,7 +273,7 @@ const cards = [
     title: "Bug Bounty - Debugging",
     src: bug,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -291,7 +291,7 @@ const cards = [
     title: "Gaming Arena",
     src: gaming,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -307,7 +307,7 @@ const cards = [
     title: "Start-up Pitch",
     src: startup,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -327,7 +327,7 @@ const cards = [
     title: "Capture the Flag",
     src: ctf,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -346,7 +346,7 @@ const cards = [
     title: "Opti-Byte",
     src: optibyte,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -366,7 +366,7 @@ const cards = [
     title: "Mind Maze",
     src: mindmaze,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
@@ -389,7 +389,7 @@ const cards = [
     title: "Cultural Event",
     src: cultural,
     ctaText: "Register Now",
-    ctaLink: "https://forms.gle/Z868qNRMTkGQ96TdA",
+    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
