@@ -15,7 +15,8 @@ const TshirtGallery = () => {
   return (
     <div>
       <Navbar />
-      <div className="tshirt-gallery min-h-screen bg-black flex flex-col items-center place-content-center text-center font-fluxbox py-50">
+      {/* Adding top padding to avoid overlapping with the navbar */}
+      <div className="tshirt-gallery min-h-screen bg-black flex flex-col items-center place-content-center text-center font-fluxbox py-50 pt-24">
         <h2 className="text-4xl text-white mb-12 font-bold">
           T-Shirt Collection
         </h2>
