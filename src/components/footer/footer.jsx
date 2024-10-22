@@ -8,7 +8,7 @@ import uniquest from '../../images/uniquest-removebg-preview.png'
 
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-gray-400 py-10">
+    <footer className="footer bg-black text-gray-400 py-10" id="footer">
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         {/* Left Column */}
         <div className="footer-column mb-2 md:mb-0 px-5 md:px-0">

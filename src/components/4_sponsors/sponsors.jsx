@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import TataIMG from "./images/tata.png";
-import BmwIMG from "./images/jsp50logo.png";
+import BMW from "./images/bmw.png";
+import JSP from "./images/jsp50logo.png";
 import BrandHouseIMG from "./images/brandhouse.png";
 import SmaaashIMG from "./images/smaaash.png";
 import ChennaiShoppingMallIMG from "./images/chennaiShoppingMall.png";
@@ -52,14 +52,14 @@ const SponsorsSection = () => {
         {/* Sponsor Logos */}
         <SwiperSlide className="flex items-center justify-center h-[150px]">
           <img
-            src={TataIMG}
+            src={BMW}
             alt="Sponsor 1"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px]">
           <img
-            src={BmwIMG}
+            src={JSP}
             alt="Sponsor 2"
             className="max-h-[150px] object-contain"
           />

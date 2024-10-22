@@ -8,7 +8,7 @@ const Navbar = () => {
         <img src={img1} alt="" className="w-[250px]" />
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           <a
-            href="#"
+            href="#hero"
             className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
           >
             Home
@@ -20,16 +20,16 @@ const Navbar = () => {
             Events
           </a>
           <a
-            href="#"
+            href="#timline"
             className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
           >
-            About
+            Timeline
           </a>
           <a
-            href="#"
+            href="#footer"
             className="mr-5 hover:text-[#17FB8D] hover:font-bold font-fluxbox"
           >
-            Contact
+            Contact Us
           </a>
         </nav>
         <a
