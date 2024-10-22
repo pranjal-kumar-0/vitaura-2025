@@ -29,7 +29,7 @@ function App() {
         {!isLoading && (
           <Routes>
             <Route path="/" element={<LandingPage />} /> {/* Your landing page */}
-            <Route path="/merchandise" element={<Merchandise />} /> {/* Your merchandise page */}
+            {/* <Route path="/merchandise" element={<Merchandise />} /> Your merchandise page */}
             {/* Add other routes as needed */}
           </Routes>
         )}
