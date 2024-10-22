@@ -79,9 +79,17 @@ const ScrollAnimation = () => {
       className="font-spacemono text-white bg-black text-center py-20 min-h-screen flex flex-col justify-center"
       ref={sectionRef}
     >
-      <h2 className="font-fluxbox bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-        Event Highlights
-      </h2>
+      <div className="mb-16 text-center">
+        {/* Center the heading */}
+        <h1 className="font-fluxbox mb-0">
+          <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-3xl lg:text-7xl md:text-5xl ">
+            Event
+          </span>
+          <span className="text-3xl lg:text-8xl md:text-5xl"> </span>
+          <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text text-3xl lg:text-7xl md:text-5xl "> Highlights
+          </span>
+        </h1>
+      </div>
       <div className="flex flex-col sm:flex-row justify-around mt-8 sm:mt-12">
         {counters.map((counter, index) => (
           <div key={index} className="flex flex-col items-center mb-8 sm:mb-0">

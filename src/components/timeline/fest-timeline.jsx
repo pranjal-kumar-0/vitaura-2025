@@ -46,18 +46,12 @@ const Timeline = () => {
     <div style={{ color: "aquamarine" }} className="overflow-x-hidden">
       <div className="timeline_container" ref={timelineRef}>
         <div className="timeline_top-section">
-          <h1
-            style={{
-              fontSize: '2.75em',
-              background: 'linear-gradient(to right, #F50062, #b700ba)',
-              WebkitBackgroundClip: 'text',
-              color: 'transparent',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: '600',
-            }}
-          >
-            Event Timeline
-          </h1>
+        <h1
+          className="mb-8 text-7xl bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text font-fluxbox"
+        >
+          Event Timeline
+        </h1>
+
           <p
             style={{
               color: 'white',

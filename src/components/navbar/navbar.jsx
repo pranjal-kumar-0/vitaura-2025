@@ -36,7 +36,7 @@ const Navbar = () => {
           )}
           {location.pathname === "/" ? (
             <Link
-              to="timeline"
+              to="events"
               smooth={true}
               duration={500}
               className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
@@ -100,13 +100,13 @@ const Navbar = () => {
               Contact
             </RouterLink>
           )}
-          {/* Merchandise link using RouterLink for page navigation */}
+          {/* Merchandise link using RouterLink for page navigation
           <RouterLink
             to="/merchandise"
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
           >
             Merchandise
-          </RouterLink>
+          </RouterLink> */}
         </nav>
         <a
           href="https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59"
