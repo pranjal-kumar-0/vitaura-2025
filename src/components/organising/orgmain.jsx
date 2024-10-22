@@ -21,6 +21,11 @@ export function TabsDemo() {
       value: "Convenor",
       content: <Convenor />,
     },
+    // {
+    //   title: "Tech Team",
+    //   value: "Convenor",
+    //   content: <Convenor />,
+    // },
   ];
 
   return (
