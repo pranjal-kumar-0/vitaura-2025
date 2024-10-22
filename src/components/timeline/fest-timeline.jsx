@@ -80,13 +80,16 @@ const Timeline = () => {
 
           {[
             { date: "26th-27th October", time: "8:00PM - 8:00AM", event: "HackAura - Solve challenges overnight!", venue: "IIEC" },
-            { date: "26th October", time: "9:00AM - 1:00PM", event: "Open Founder's Pitch - Present your innovative startup ideas.", venue: "Moot Court" },
-            { date: "27th October", time: "10:30AM - 1:30PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "Newton Hall" },
-            { date: "26th October", time: "11AM - 1PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB, G09 and G20" },
-            { date: "28th October", time: "2PM - 4PM", event: "Start-up Pitch - Pitch your startup ideas to investors.", venue: "IIEC Cabin" },
-            { date: "28th October", time: "4:00PM-9:00PM - 4PM", event: "BBH - Battle of Business Hustlers.", venue: "GO2, AB1" },
-            { date: "27th October", time: "11:00AM - 7:00PM", event: "Gaming Arena - Show your gaming skills!", venue: "AB1" },
-            { date: "26th October", time: "4:30PM - 7PM", event: "Optibyte - Programming challenge.", venue: "AB2" },
+            { date: "27th October", time: "10:00AM - 12:00PM", event: "Open Founder's Pitch - Present your innovative startup ideas.", venue: "CB-G09" },
+            { date: "25th-27th October", time: "-", event: "Open Source", venue: "Online" },
+            { date: "27th October", time: "10:00AM - 12:00PM", event: "Bug Bounty", venue: "CB-LABS" },
+            { date: "27th October", time: "10:00AM - 4:00PM", event: "Gaming Arena - Show your gaming skills!", venue: "CB-LABS" },
+            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to investors.", venue: "Newton Hall" },
+            { date: "27th October", time: "10:00AM - 11:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC" },
+            { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC" },
+            { date: "26th October", time: "16:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
+            { date: "27th October", time: "4:00PM - 7:30PM", event: "Cultural", venue: "AB2- Auditorium" },
+            
           ].map((event, index) => (
             <div
               key={index}

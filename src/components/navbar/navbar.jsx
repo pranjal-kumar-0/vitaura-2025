@@ -1,47 +1,106 @@
 import React from "react";
 import img1 from "../../images/finalfinal.png";
 import { Link } from "react-scroll"; // For scrolling within the page
-import { Link as RouterLink } from "react-router-dom"; // For navigation between pages
+import { Link as RouterLink, useLocation } from "react-router-dom"; // For navigation between pages
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <header className="text-[#fff] body-font bg-black fixed bg-opacity-10 top-0 w-full z-[10000000] backdrop-blur-lg">
       <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center z-[10000000] p-1">
         <img src={img1} alt="" className="w-[250px]" />
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-          >
-            Home
-          </Link>
-          <Link
-            to="timeline"
-            smooth={true}
-            duration={500}
-            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-          >
-            Events
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-          >
-            Highlights
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-          >
-            Contact
-          </Link>
-          {/* Changed Merchandise Link to RouterLink */}
+          {/* Conditionally render Link or RouterLink based on the current location */}
+          {location.pathname === "/" ? (
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+            >
+              Home
+            </Link>
+          ) : (
+            <RouterLink
+              to="/"
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+              onClick={() => {
+                setTimeout(() => {
+                  document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Home
+            </RouterLink>
+          )}
+          {location.pathname === "/" ? (
+            <Link
+              to="timeline"
+              smooth={true}
+              duration={500}
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+            >
+              Events
+            </Link>
+          ) : (
+            <RouterLink
+              to="/"
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+              onClick={() => {
+                setTimeout(() => {
+                  document.getElementById("timeline").scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Events
+            </RouterLink>
+          )}
+          {location.pathname === "/" ? (
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+            >
+              Highlights
+            </Link>
+          ) : (
+            <RouterLink
+              to="/"
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+              onClick={() => {
+                setTimeout(() => {
+                  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Highlights
+            </RouterLink>
+          )}
+          {location.pathname === "/" ? (
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+            >
+              Contact
+            </Link>
+          ) : (
+            <RouterLink
+              to="/"
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+              onClick={() => {
+                setTimeout(() => {
+                  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Contact
+            </RouterLink>
+          )}
+          {/* Merchandise link using RouterLink for page navigation */}
           <RouterLink
             to="/merchandise"
             className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
