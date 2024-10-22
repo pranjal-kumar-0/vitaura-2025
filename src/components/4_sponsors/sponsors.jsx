@@ -84,3 +84,4 @@ const SponsorsSection = () => {
 };
 
 export default SponsorsSection;
+
