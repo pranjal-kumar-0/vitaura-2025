@@ -43,3 +43,12 @@ body {
   }
 }
 
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove the scrollbar by hiding overflow */
+body {
+  overflow-x: hidden;
+}
