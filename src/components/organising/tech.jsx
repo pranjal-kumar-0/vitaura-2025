@@ -12,7 +12,7 @@ const Tech = () => {
     <div className="bg-black rounded-xl p-6 sm:p-8 mb-20">
       <div>
         <h1 className="text-left pl-4 sm:pl-8 mb-5 text-3xl sm:text-4xl font-fluxbox text-white">
-          Patron
+          Technical Team
         </h1>
       </div>
       <div className="wrapper grid grid-cols-1 gap-8">
