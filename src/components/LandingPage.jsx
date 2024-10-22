@@ -12,7 +12,7 @@ import video from "./video/video.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="text-gray-400 body-font bg-black">
+    <section className="text-gray-400 body-font bg-black" id="hero">
       <div className="container mx-auto flex px-5 py-24 flex-col md:flex-row items-center relative">
         <div className="flex flex-col items-center text-center mb-16 md:mb-0 md:w-1/2 md:text-left md:items-start lg:flex-grow lg:w-1/2 lg:pr-24 md:pr-16">
           <h1 className="title-font text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-4 font-medium text-white mt-14 md:mt-0">
