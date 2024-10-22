@@ -44,6 +44,7 @@ const CountdownTimer = ({ targetDate }) => {
         {timeLeft.seconds}s
       </div>
     </div>
+
   );
 };
 
