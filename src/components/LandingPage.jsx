@@ -9,6 +9,7 @@ import Footer from "./footer/footer";
 import TimeLine from "./timeline/fest-timeline";
 import { TabsDemo } from "./organising/orgmain";
 import video from "./video/video.mp4";
+import { ExpandableCardDemo } from './events/events';
 
 const HeroSection = () => {
   return (
@@ -78,6 +79,7 @@ const LandingPageComponent = () => {
         <section id="about">
           <ScrollAnimation />
         </section>
+        {/* <ExpandableCardDemo /> */}
         {/* <NumbersSection /> */}
         <section id="timeline">
           <TimeLine />
