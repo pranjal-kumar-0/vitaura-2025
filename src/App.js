@@ -20,15 +20,18 @@ function App() {
   }, []);
 
   return (
-    <Router> {/* Wrap your app with Router */}
+    <Router>
+      {" "}
+      {/* Wrap your app with Router */}
       <div className="App dark-theme">
         {/* Show loader only when loading */}
         {isLoading && <Loader timeline={timeline} />}
-        
+
         {/* When not loading, display the routed pages */}
         {!isLoading && (
           <Routes>
-            <Route path="/" element={<LandingPage />} /> {/* Your landing page */}
+            <Route path="/" element={<LandingPage />} />{" "}
+            {/* Your landing page */}
             {/* <Route path="/merchandise" element={<Merchandise />} /> Your merchandise page */}
             {/* Add other routes as needed */}
           </Routes>
