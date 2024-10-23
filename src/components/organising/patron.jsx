@@ -1,6 +1,5 @@
 import React from "react";
-import sudhakar from "./images/patrons/sudhakar.png";
-import associate from "./images/patrons/associate.png";
+
 import vc from "./images/patrons/vc.png";
 import registrar from "./images/patrons/registrar.png";
 // import mocktailsImage from "assets/images/Mocktails1.png";
@@ -37,17 +36,8 @@ const Patrons = () => {
             <h2 className="font-spacemono text-gray-300">Registrar</h2>
           </div>
         </div>
-        <div className="card flex flex-col items-center">
-          <div className="poster mb-4">
-            <img src={sudhakar} alt="Patron 3" className="rounded-lg" />
-          </div>
-          <div className="details text-center">
-            <h1 className="font-spacemono text-white">
-              Dr. S. Sudhakar Ilango
-            </h1>
-            <h2 className="font-spacemono text-gray-300">Dean SCOPE</h2>
-          </div>
-        </div>
+       
+      </div>
       </div>
    
   );
