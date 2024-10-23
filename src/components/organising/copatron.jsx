@@ -1,4 +1,7 @@
 import React from "react";
+import sudhakar from "./images/patrons/sudhakar.png";
+import associate from "./images/patrons/associate.png";
+
 import udit from "./images/copatrons/uditsir.png";
 import chirra from "./images/copatrons/chirra.png";
 import reg2 from "./images/copatrons/reg2.png";
@@ -17,6 +20,31 @@ const Copatrons = () => {
         </h1>
       </div>
       <div className="wrapper">
+        <div className="card flex flex-col items-center">
+          <div className="poster mb-4">
+            <img src={sudhakar} alt="Patron 3" className="rounded-lg" />
+          </div>
+          <div className="details text-center">
+            <h1 className="font-spacemono text-white">
+              Dr. S. Sudhakar Ilango
+            </h1>
+            <h2 className="font-spacemono text-gray-300">Dean SCOPE</h2>
+          </div>
+        </div>
+
+        <div className="card flex flex-col items-center">
+          <div className="poster mb-4">
+            <img src={associate} alt="Patron 3" className="rounded-lg" />
+          </div>
+          <div className="details text-center">
+            <h1 className="font-spacemono text-white">
+              Dr. Saroj Kumar Panigrahy
+            </h1>
+            <h2 className="font-spacemono text-gray-300">Associate Dean SCOPE</h2>
+          </div>
+        </div>
+
+
         <div className="card">
           <div className="poster">
             <img src={udit} alt="copatron 1" />
