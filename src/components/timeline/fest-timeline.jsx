@@ -74,7 +74,7 @@ const Timeline = () => {
             { date: "25th-27th October", time: "-", event: "Open Source", venue: "Online" },
             { date: "27th October", time: "10:00AM - 12:00PM", event: "Bug Bounty", venue: "CB-LABS" },
             { date: "27th October", time: "10:00AM - 4:00PM", event: "Gaming Arena - Show your gaming skills!", venue: "CB-LABS" },
-            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to investors.", venue: "Newton Hall" },
+            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to experts.", venue: "Newton Hall" },
             { date: "27th October", time: "10:00AM - 11:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC" },
             { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC" },
             { date: "26th October", time: "6:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
