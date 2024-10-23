@@ -10,58 +10,116 @@ import "./org.css";
 
 const Tech = () => {
   return (
-    <div className="bg-black rounded-xl p-6 sm:p-8 mb-20">
+    <div className="bg-black rounded-xl">
       <div>
-        <h1 className="text-left pl-4 sm:pl-8 mb-5 text-3xl sm:text-4xl font-fluxbox text-white">
+        <h1 className="text-left pl-8 mb-5 text-5xl font-fluxbox text-white">
           Technical Team
         </h1>
       </div>
-      <div className="wrapper grid grid-cols-1 gap-8">
-        <div className="card flex flex-col items-center">
-          <div className="poster mb-4">
-            <img src={atharv} alt="Patron 1" className="rounded-lg" />
+      <div className="wrapper">
+        <div className="card">
+          <div className="poster">
+            <img src={atharv} alt="copatron 1" />
           </div>
-          <div className="details text-center">
-            <h1 className="font-spacemono text-white">Atharv Rastogi</h1>
-            <h2 className="font-spacemono text-gray-300">
+          <div className="details">
+            <h1 className="font-spacemono">Atharv Rastogi</h1>
+            <h2 className="font-spacemono">
               Technical Lead - VITAURA, Uniquest
             </h2>
-          </div>
-        </div>
-        <div className="card flex flex-col items-center">
-          <div className="poster mb-4">
-            <img src={devvrat} alt="Patron 2" className="rounded-lg" />
-          </div>
-          <div className="details text-center">
-            <h1 className="font-spacemono text-white">Devvrat Pathak</h1>
-            <h2 className="font-spacemono text-gray-300">
-              Technical Lead - Entrepreneurship Club
-            </h2>
-          </div>
-        </div>
-        <div className="card flex flex-col items-center">
-          <div className="poster mb-4">
-            <img src={anand} alt="Patron 3" className="rounded-lg" />
-          </div>
-          <div className="details text-center">
-            <h1 className="font-spacemono text-white">Anand RajaM</h1>
-            <h2 className="font-spacemono text-gray-300">
-              Technical Co-Lead - Uniquest
-            </h2>
+            <p
+              className="desc"
+              style={{ fontFamily: "'Quicksand', sans-serif" }}
+            >
+              {/* <img src={qrCodeImage} alt="QR code" /> */}
+            </p>
           </div>
         </div>
 
-        <div className="card flex flex-col items-center">
-          <div className="poster mb-4">
-            <img src={ayus} alt="Patron 3" className="rounded-lg" />
+        <div className="card">
+          <div className="poster">
+            <img src={devvrat} alt="Patron 4" />
           </div>
-          <div className="details text-center">
-            <h1 className="font-spacemono text-white">Ayus Pathak</h1>
-            <h2 className="font-spacemono text-gray-300">
-              President - Entrepreneurship Club
+          <div className="details">
+            <h1 className="font-spacemono">Devvrat Pathak</h1>
+            <h2 className="font-spacemono">
+              Technical Lead - Entrepreneurship Club
             </h2>
+            <p
+              className="desc"
+              style={{ fontFamily: "'Quicksand', sans-serif" }}
+            >
+              {/* <img src={qrCodeImage} alt="QR code" /> */}
+            </p>
           </div>
         </div>
+
+        <div className="card">
+          <div className="poster">
+            <img src={anand} alt="Patron 1" />
+          </div>
+          <div className="details">
+            <h1 className="font-spacemono">Anand RajaM</h1>
+            <h2 className="font-spacemono">Technical Co-Lead - Uniquest</h2>
+            <p
+              className="desc"
+              style={{ fontFamily: "'Quicksand', sans-serif" }}
+            >
+              {/* <img src={qrCodeImage} alt="QR code" /> */}
+            </p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="poster">
+            <img src={ayus} alt="Patron 1" />
+          </div>
+          <div className="details">
+            <h1 className="font-spacemono">Ayus Pathak</h1>
+            <h2 className="font-spacemono">
+              President - Entrepreneurship Club
+            </h2>
+            <p
+              className="desc"
+              style={{ fontFamily: "'Quicksand', sans-serif" }}
+            >
+              {/* <img src={qrCodeImage} alt="QR code" /> */}
+            </p>
+          </div>
+        </div>
+
+        {/* <div className="card">
+        <div className="poster">
+          <img src={mocktailsImage} alt="Mocktails image" />
+        </div>
+        <div className="details">
+          <h1 className="font-spacemono">
+            Mocktail Menu
+          </h1>
+          <h2 className="font-spacemono">
+            Individual - From ₹100
+          </h2>
+          <p className="desc" style={{ fontFamily: "'Quicksand', sans-serif" }}>
+            <img src={qrCodeImage} alt="QR code" />
+          </p>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="poster">
+          <img src={dessertsImage} alt="Desserts image" />
+        </div>
+        <div className="details">
+          <h1 className="font-spacemono">
+            Desserts Menu
+          </h1>
+          <h2 className="font-spacemono">
+            Complimentary - Included in Buffet
+          </h2>
+          <p className="desc" style={{ fontFamily: "'Quicksand', sans-serif" }}>
+            <img src={qrCodeImage} alt="QR code" />
+          </p>
+        </div>
+      </div> */}
       </div>
     </div>
   );
