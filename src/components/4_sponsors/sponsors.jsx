@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import JSP from "./images/jsp50logo.png";
 import BrandHouseIMG from "./images/brandhouse.png";
 import SmaaashIMG from "./images/smaaash.png";
 import KpIMG from "./images/kp.png";
@@ -14,7 +13,6 @@ const SponsorsSection = () => {
   return (
     <section className="flex flex-col items-center pt-[15rem] w-full">
       <div className="mb-16 text-center">
-        {/* Center the heading */}
         <h1 className="font-fluxbox font-extrabold mb-0">
           <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text text-3xl lg:text-8xl md:text-5xl ">
             POWERED
@@ -29,52 +27,44 @@ const SponsorsSection = () => {
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
-        slidesPerView={4}
+        slidesPerView={3} // Display three sponsors at a time
         loop={true}
         autoplay={{
-          delay: 0,
+          delay: 0, // No delay between slides
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         }}
-        speed={5000} // Adjust the speed for smoothness
+        speed={3000} // Speed of the transition
         centeredSlides={false}
         className="w-full"
         allowTouchMove={false}
-        freeMode={true} // Enables continuous sliding
       >
         {/* Sponsor Logos */}
-        <SwiperSlide className="flex items-center justify-center h-[150px]">
-          <img
-            src={JSP}
-            alt="Sponsor 2"
-            className="max-h-[150px] object-contain"
-          />
-        </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[20%]">
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={BrandHouseIMG}
-            alt="Sponsor 3"
+            alt="Brand House"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[20%]">
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={SmaaashIMG}
-            alt="Sponsor 4"
+            alt="Smaaash"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[20%]">
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={KpIMG}
-            alt="Sponsor 6"
+            alt="KP"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
-        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[20%]">
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={Asus}
-            alt="Sponsor 7"
+            alt="Asus"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
@@ -84,4 +74,3 @@ const SponsorsSection = () => {
 };
 
 export default SponsorsSection;
-

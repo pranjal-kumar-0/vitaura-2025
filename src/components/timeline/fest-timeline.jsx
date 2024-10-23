@@ -70,15 +70,15 @@ const Timeline = () => {
 
           {[
             { date: "26th-27th October", time: "8:00PM - 8:00AM", event: "HackAura - Solve challenges overnight!", venue: "IIEC" },
-            { date: "27th October", time: "10:00AM - 12:00PM", event: "Open Founder's Pitch - Present your innovative startup ideas.", venue: "CB-G09" },
-            { date: "25th-27th October", time: "-", event: "Open Source", venue: "Online" },
-            { date: "27th October", time: "10:00AM - 12:00PM", event: "Bug Bounty", venue: "CB-LABS" },
+            { date: "27th October", time: "10:00AM - 12:00PM", event: "Founder's Pitch - Present your innovative startup ideas.", venue: "CB-G09" },
+            { date: "25th-27th October", time: "-", event: "VITAURA Week Of Code", venue: "Online" },
+            { date: "27th October", time: "10:00AM - 12:00PM", event: "Bug Bounty Hunt", venue: "CB-LABS" },
             { date: "27th October", time: "10:00AM - 4:00PM", event: "Gaming Arena - Show your gaming skills!", venue: "CB-LABS" },
-            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to experts.", venue: "Newton Hall" },
-            { date: "27th October", time: "10:00AM - 11:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC" },
-            { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC" },
+            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to experts.", venue: "CB classrooms" },
+            { date: "27th October", time: "10:00AM - 1:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC Centre" },
+            { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC Centre" },
             { date: "26th October", time: "6:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
-            { date: "27th October", time: "4:00PM - 7:30PM", event: "Cultural", venue: "AB2- Auditorium" },
+            { date: "27th October", time: "4:00PM - 7:30PM", event: "Aurelia - Cultural Event", venue: "AB2- Auditorium" },
           ].map((event, index) => (
             <div
               key={index}

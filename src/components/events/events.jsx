@@ -249,7 +249,7 @@ const cards = [
 
   {
     description: "Join the challenge",
-    title: "Open Source Competition",
+    title: "VITAURA Week Of Code",
     src: osc,
     ctaText: "Register Now",
     ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
@@ -270,7 +270,7 @@ const cards = [
 
   {
     description: "Find the bugs",
-    title: "Bug Bounty - Debugging",
+    title: "Bug Bounty - Hunt",
     src: bug,
     ctaText: "Register Now",
     ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
@@ -386,7 +386,7 @@ const cards = [
 
   {
     description: "Get ready to get entertained",
-    title: "Cultural Event",
+    title: " Aurelia - Cultural Event",
     src: cultural,
     ctaText: "Register Now",
     ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",

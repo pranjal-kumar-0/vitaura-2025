@@ -34,6 +34,29 @@ const Navbar = () => {
               Home
             </RouterLink>
           )}
+           {location.pathname === "/" ? (
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+            >
+              Highlights
+            </Link>
+          ) : (
+            <RouterLink
+              to="/"
+              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
+              onClick={() => {
+                setTimeout(() => {
+                  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Highlights
+            </RouterLink>
+          
+          )}
           {location.pathname === "/" ? (
             <Link
               to="events"
@@ -55,28 +78,7 @@ const Navbar = () => {
             >
               Events
             </RouterLink>
-          )}
-          {location.pathname === "/" ? (
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-            >
-              Highlights
-            </Link>
-          ) : (
-            <RouterLink
-              to="/"
-              className="mr-5 hover:bg-gradient-to-r hover:from-[#FF7B02] hover:to-[#FC4C05] hover:text-transparent hover:bg-clip-text hover:font-bold font-fluxbox cursor-pointer"
-              onClick={() => {
-                setTimeout(() => {
-                  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              }}
-            >
-              Highlights
-            </RouterLink>
+         
           )}
           {location.pathname === "/" ? (
             <Link
