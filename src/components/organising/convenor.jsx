@@ -11,7 +11,7 @@ const Convenor = () => {
     <div className="bg-black rounded-xl">
       <div>
         <h1 className="text-left pl-8 mb-5 text-5xl font-fluxbox text-white">
-          Convenors
+          Conveners
         </h1>
       </div>
       <div className="wrapper">

@@ -18,8 +18,8 @@ export function TabsDemo() {
       content: <Copatrons />,
     },
     {
-      title: "Convenor",
-      value: "Convenor",
+      title: "Convener",
+      value: "Convener",
       content: <Convenor />,
     },
     {
