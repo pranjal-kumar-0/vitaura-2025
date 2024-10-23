@@ -49,6 +49,8 @@ html {
 }
 
 /* Remove the scrollbar by hiding overflow */
-body {
+
+html, body {
   overflow-x: hidden;
+  width: 100%;
 }

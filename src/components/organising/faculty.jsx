@@ -1,19 +1,19 @@
 import React from "react";
-import udit from "./images/copatrons/uditsir.png";
-import chirra from "./images/copatrons/chirra.png";
-import reg2 from "./images/copatrons/reg2.png";
-import co3 from "./images/copatrons/co3.png";
+import udit from "./images/faculty/uditsir.png";
+import chirra from "./images/faculty/chirra.png";
+import reg2 from "./images/faculty/reg2.png";
+import co3 from "./images/faculty/co3.png";
 // import mocktailsImage from "assets/images/Mocktails1.png";
 // import dessertsImage from "assets/images/Deserts.png";
 // import qrCodeImage from "assets/images/qr-code-removebg-preview.png";
 import "./org.css";
 
-const Copatrons = () => {
+const FacultyCoordinator = () => {
   return (
     <div className="bg-black rounded-xl">
       <div>
         <h1 className="text-left pl-8 mb-5 text-5xl font-fluxbox text-white">
-          Co Patron
+        Faculty Coordinators
         </h1>
       </div>
       <div className="wrapper">
@@ -119,4 +119,4 @@ const Copatrons = () => {
   );
 };
 
-export default Copatrons;
+export default FacultyCoordinator;
