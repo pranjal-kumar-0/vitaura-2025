@@ -8,6 +8,8 @@ import SmaaashIMG from "./images/smaaash.png";
 import KpIMG from "./images/kp.png";
 import Asus from "./images/asus-logo-white.png";
 import "./style.css";
+import Metro from "./images/metro.jpg"
+import IRG from "./images/i_r_g.png"
 
 const SponsorsSection = () => {
   return (
@@ -65,6 +67,20 @@ const SponsorsSection = () => {
           <img
             src={Asus}
             alt="Asus"
+            className="max-h-[150px] object-contain"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
+          <img
+            src={IRG}
+            alt="IRG"
+            className="max-h-[150px] object-contain"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
+          <img
+            src={Metro}
+            alt="Metro"
             className="max-h-[150px] object-contain"
           />
         </SwiperSlide>
