@@ -31,7 +31,7 @@ const Patrons = () => {
           </div>
           <div className="details text-center">
             <h1 className="font-spacemono text-white">
-              Dr. Jagadish Chandra Dhandapani
+            Dr. Jagadish Chandra Mudiganti
             </h1>
             <h2 className="font-spacemono text-gray-300">Registrar</h2>
           </div>
