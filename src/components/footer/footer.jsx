@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <p className=" bg-gradient-to-r from-[#F50062] to-[#b700ba] font-bold text-transparent bg-clip-text text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 font-spacemono">
-          VITAURA© 2024 —
+          VITAURA© 2025 —
           <a
             href="mailto:contact@vitaura24.com"
             className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text ml-1 font-spacemono"

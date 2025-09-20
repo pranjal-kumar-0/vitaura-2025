@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center mb-16 md:mb-0 md:w-1/2 md:text-left md:items-start lg:flex-grow lg:w-1/2 lg:pr-24 md:pr-16">
           <h1 className="title-font text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-4 font-medium text-white mt-14 md:mt-0">
             <span className="bg-gradient-to-r from-[#FF7B02] to-[#FC4C05] text-transparent bg-clip-text font-spacemono">
-              2024
+              2025
             </span>
             <br className="inline-block" />
             <span className="bg-gradient-to-r from-[#F50062] to-[#b700ba] inline-block text-transparent bg-clip-text font-fluxbox">
@@ -35,7 +35,7 @@ const HeroSection = () => {
               {/* Right white side with 'Coming Soon' text */}
               <div className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-white flex items-center justify-center px-[57px] py-2 md:px-6 md:py-[16px] rounded-b-lg sm:rounded-r-lg sm:rounded-bl-none group-hover:bg-gradient-to-r group-hover:from-[#fff] group-hover:to-[#fff] group-hover:text-black transition duration-1000 ease-in-out">
                 <span className="text-lg sm:text-xl font-bold font-spacemono">
-                  26th Oct'24
+                  26th Oct'25
                 </span>
               </div>
             </div>

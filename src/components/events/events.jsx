@@ -393,7 +393,7 @@ const cards = [
     content: () => {
       return (
         <p style={{ textAlign: "left" }}>
-          Aurelia is the ultimate stage at VITAURA'24 where raw talent
+          Aurelia is the ultimate stage at VITAURA'25 where raw talent
           meets electrifying performances! Whether you're a dancer with
           moves that mesmerize, a singer who hits every note, a rapper with
           rhymes that ignite, a dramatist who brings stories to life, or an
