@@ -35,7 +35,7 @@ const HeroSection = () => {
               {/* Right white side with 'Coming Soon' text */}
               <div className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-white flex items-center justify-center px-[57px] py-2 md:px-6 md:py-[16px] rounded-b-lg sm:rounded-r-lg sm:rounded-bl-none group-hover:bg-gradient-to-r group-hover:from-[#fff] group-hover:to-[#fff] group-hover:text-black transition duration-1000 ease-in-out">
                 <span className="text-lg sm:text-xl font-bold font-spacemono">
-                  26th Oct'25
+                  2nd Nov'25
                 </span>
               </div>
             </div>
