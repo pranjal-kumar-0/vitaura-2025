@@ -11,7 +11,7 @@ const Patrons = () => {
   return (
     <div className="bg-black rounded-xl p-6 sm:p-8 mb-20">
       <div>
-        <h1 className="text-left pl-4 sm:pl-8 mb-5 text-3xl sm:text-4xl font-fluxbox text-white">
+        <h1 className="text-center mb-5 text-3xl sm:text-4xl font-fluxbox text-white">
           Patrons
         </h1>
       </div>

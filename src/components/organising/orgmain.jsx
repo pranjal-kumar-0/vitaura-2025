@@ -6,7 +6,7 @@ import FacultyCoordinator from "./faculty";
 import Tech from "./tech";
 import CoPatron from "./co-patron";
 
-export function TabsDemo() {
+const RoleTabs = () => {
   const tabs = [
     {
       title: "Patron",
@@ -35,6 +35,23 @@ export function TabsDemo() {
     },
   ];
 
+  return <Tabs tabs={tabs} containerClassName="justify-center" contentClassName="mt-4" />;
+};
+
+export function TabsDemo() {
+  const yearTabs = [
+    {
+      title: "2024",
+      value: "2024",
+      content: <RoleTabs />,
+    },
+    {
+      title: "2025",
+      value: "2025",
+      content: <RoleTabs />,
+    },
+  ];
+
   return (
     <div className="px-5 lg:px-0 min-h-screen md:min-h-[0] relative flex flex-col max-w-[90rem] mx-auto w-full items-center justify-center font-spacemono">
       <div>
@@ -42,7 +59,7 @@ export function TabsDemo() {
           Organising Committee
         </h1>
       </div>
-      <Tabs tabs={tabs} />
+      <Tabs tabs={yearTabs} containerClassName="justify-center" contentClassName="mt-8" />
     </div>
   );
 }
