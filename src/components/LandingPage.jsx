@@ -64,7 +64,7 @@ const HeroSection = () => {
 };
 
 const LandingPageComponent = () => {
-  const targetDate = new Date("2024-10-26T18:00:00");
+  const targetDate = new Date("2025-11-02T18:00:00");
   return (
     <div>
       <Navbar />

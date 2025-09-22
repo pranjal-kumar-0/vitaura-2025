@@ -69,16 +69,14 @@ const Timeline = () => {
           <div className="timeline__line" ref={lineRef}></div>
 
           {[
-            { date: "26th-27th October", time: "8:00PM - 8:00AM", event: "HackAura - Solve challenges overnight!", venue: "IIEC" },
-            { date: "27th October", time: "10:00AM - 12:00PM", event: "Founder's Pitch - Present your innovative startup ideas.", venue: "CB-G09" },
-            { date: "25th-27th October", time: "-", event: "VITAURA Week Of Code", venue: "Online" },
-            { date: "27th October", time: "10:00AM - 12:00PM", event: "Bug Bounty Hunt", venue: "CB-LABS" },
-            { date: "27th October", time: "10:00AM - 4:00PM", event: "Gaming Arena - Show your gaming skills!", venue: "CB-LABS" },
-            { date: "27th October", time: "2:00PM - 4:00PM", event: "Start-up Pitch - Pitch your startup ideas to experts.", venue: "CB classrooms" },
-            { date: "27th October", time: "10:00AM - 1:00PM", event: "Capture The Flag - Test your cybersecurity skills!", venue: "IIEC Centre" },
-            { date: "27th October", time: "2:00PM - 4:00PM", event: "Optibyte - Programming challenge.", venue: "IIEC Centre" },
-            { date: "26th October", time: "6:00PM - 7:30PM", event: "Mind Maze - A test of wit and intellect.", venue: "CB-LABS" },
-            { date: "27th October", time: "4:00PM - 7:30PM", event: "Aurelia - Cultural Event", venue: "AB2- Auditorium" },
+            { date: "1–2 Nov 2025", time: "08:00PM - 08:00AM", event: "HackAura – Flagship Hackathon", venue: "CB-305" },
+            { date: "2 Nov 2025", time: "09:00AM - 12:00PM", event: "Code-a-Thon – DSA Coding", venue: "CB Computer Labs" },
+            { date: "2 Nov 2025", time: "01:30PM - 03:00PM", event: "MindMaze – Technical Quiz", venue: "CB G09 & G20" },
+            { date: "2 Nov 2025", time: "03:00PM - 05:00PM", event: "Startup Pitch", venue: "CB G09 & G20" },
+            { date: "3 Nov 2025", time: "09:00AM - 11:00PM", event: "Capture the Flag (CTF)", venue: "CB Computer Labs" },
+            { date: "2–3 Nov 2025", time: "08:00PM - 08:00AM", event: "ML HackAura", venue: "CB-305" },
+            { date: "3 Nov 2025", time: "02:00PM - 05:00PM", event: "ArenaX – Gaming Arena", venue: "CB Computer Labs" },
+            { date: "3 Nov 2025", time: "05:30PM - 08:00PM", event: "VITAURA Talent Night", venue: "AB2 Auditorium" },
           ].map((event, index) => (
             <div
               key={index}
