@@ -39,7 +39,9 @@ export function ExpandableCardDemo() {
 
   return (
     <>
-      <h2 className="mb-8 text-7xl bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text font-fluxbox">Events</h2>
+      <h2 className="mb-8 text-7xl bg-gradient-to-r from-[#F50062] to-[#b700ba] text-transparent bg-clip-text font-fluxbox">
+        Events
+      </h2>
 
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -136,40 +138,42 @@ export function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
       <ul className="w-full grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 mx-auto">
-      {cards.map((card, index) => (
-        <motion.div
-          layoutId={`card-${card.title}-${id}`}
-          key={card.title}
-          onClick={() => setActive(card)}
-          className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer max-w-[180px] mx-auto" // reduced max width
-        >
-          <div className="flex gap-4 flex-col w-full">
-            <motion.div layoutId={`image-${card.title}-${id}`} className="aspect-[4/3] w-full">
-              <img
-                src={card.src}
-                alt={card.title}
-                className="h-full w-full rounded-lg object-cover object-top"
-              />
-            </motion.div>
-            <div className="flex justify-center items-center flex-col">
-              <motion.h3
-                layoutId={`title-${card.title}-${id}`}
-                className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-sm" // reduced font size
+        {cards.map((card, index) => (
+          <motion.div
+            layoutId={`card-${card.title}-${id}`}
+            key={card.title}
+            onClick={() => setActive(card)}
+            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer max-w-[180px] mx-auto" // reduced max width
+          >
+            <div className="flex gap-4 flex-col w-full">
+              <motion.div
+                layoutId={`image-${card.title}-${id}`}
+                className="aspect-[4/3] w-full"
               >
-                {card.title}
-              </motion.h3>
-              <motion.p
-                layoutId={`description-${card.description}-${id}`}
-                className="text-neutral-600 dark:text-neutral-400 text-center text-sm" // reduced font size
-              >
-                {card.description}
-              </motion.p>
+                <img
+                  src={card.src}
+                  alt={card.title}
+                  className="h-full w-full rounded-lg object-cover object-top"
+                />
+              </motion.div>
+              <div className="flex justify-center items-center flex-col">
+                <motion.h3
+                  layoutId={`title-${card.title}-${id}`}
+                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-sm" // reduced font size
+                >
+                  {card.title}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${card.description}-${id}`}
+                  className="text-neutral-600 dark:text-neutral-400 text-center text-sm" // reduced font size
+                >
+                  {card.description}
+                </motion.p>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      ))}
-    </ul>
-
+          </motion.div>
+        ))}
+      </ul>
     </>
   );
 }
@@ -209,204 +213,259 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Solve Challenges",
-    title: "Hackaura",
+    description: "Solve real-world problems",
+    title: "HackAura – Flagship Hackathon",
     src: hackathon,
     ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          Join us for a 12-hour hackathon where teams solve real-world challenges
-          in Health, Cyber Security, Fintech, Industries, and Aerospace. Work with
-          mentors to develop innovative solutions and compete in a fair, 2-level
-          judged competition. Showcase your skills, collaborate with peers, and win
-          exciting prizes! This is your chance to turn ideas into impactful tech solutions.
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> Intro to Hackathons & Problem Solving
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Present your innovative startup ideas",
-    title: "Founder's Pitch",
-    src: founder,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          “Founder's Pitch” is an exciting competition where contestants are 
-          assigned a company beforehand and must step into the shoes of a founder.
-          They will face a series of questions and real-world scenarios designed to
-          test their decision-making, problem-solving, and leadership skills across
-          various business challenges. Contestants will be evaluated on their strategic
-          thinking, adaptability, and overall approach to running the company.
+        <p>
+          <b>Venue:</b> CB-305
         </p>
-      );
-    },
+        <p>
+          <b>Date:</b> 1–2 Nov 2025 (08:00 pm – 08:00 am)
+        </p>
+        <p>
+          <b>Duration:</b> 12 Hrs | <b>Fees:</b> ₹149/- per team (Team of 4)
+        </p>
+        <p>
+          Teams solve startup & social problems. Winning teams gain recognition,
+          internship offers, and mentorship.
+        </p>
+        <p>
+          <b>Why?</b> Real-world problem solving, innovation & startup culture.
+        </p>
+        <p>
+          <b>Expected Outcome:</b> Learn to go from ideation to prototype.
+          Problem statements from industry + incubated startups.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 100–200 teams
+        </p>
+      </div>
+    ),
   },
-
   {
-    description: "Join the challenge",
-    title: "VITAURA Week Of Code",
+    description: "Competitive coding challenge",
+    title: "Code-a-Thon – DSA Coding",
     src: osc,
     ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          The VITAURA Week of Code: Open Source Competition gives developers
-          a chance to show their work on open-source projects. Participants
-          present their projects, explain challenges they faced, and can choose
-          to give a live demo. Judges score based on technical skill, creativity,
-          teamwork, and overall contribution to the open-source community.
-          The event celebrates collaboration in open-source development,
-          with feedback provided and top projects awarded.
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> Cracking DSA & Competitive Programming Basics
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Find the bugs",
-    title: "Bug Bounty - Hunt",
-    src: bug,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          The Bug Bounty Hunt will be a competition where participants review code,
-          applications, or websites to identify errors, vulnerabilities, or logical bugs
-          Participants will be challenged to find and report issues in a limited time,
-          earning points based on the number and severity of bugs discovered.
+        <p>
+          <b>Venue:</b> CB Computer Labs
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Show you gaming skills",
-    title: "Gaming Arena",
-    src: gaming,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          TGC Battlegrounds Tournament - Compete in BGMI, Valorant, Free Fire,
-          and COD Mobile! Join the action, test your skills, and battle for glory!
+        <p>
+          <b>Date:</b> 2 Nov 2025 (09:00 am – 12:00 pm)
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Pitch your startup ideas to investors",
-    title: "Start-up Pitch",
-    src: startup,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          Bring your innovative ideas to life at VITAURA's Start Up pitch!
-          Prepare a concise pitch deck with a maximum of 6-7 slides that highlights
-          your concept, business model, and market strategy. While a prototype
-          is encouraged to showcase the feasibility of your solution, it is not mandatory.
-          Impress the panel with your vision and get one step closer to turning your
-          idea into reality.
+        <p>
+          <b>Fees:</b> ₹99/- per person (Solo/Team of 2)
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Test your cybersecurity skills",
-    title: "Capture the Flag",
-    src: ctf,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          Test your skills across domains like Cryptography, Networking,
-          Web Exploitation, and more in this 3-hour competition.
-          Solve 21 challenges, released hourly, and earn points based on difficulty.
-          Teams of up to 3 members will compete, with a live leaderboard
-          tracking the top performers. Show your expertise and claim victory!
+        <p>
+          Logic + Data Structures contest for both freshers & advanced coders.
         </p>
-      );
-    },
-  },
-
-  {
-    description: "Code Optimization",
-    title: "Opti-Byte",
-    src: optibyte,
-    ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          The competition will consist of code optimization challenges,
-          where participants are required to improve code efficiency,
-          fix bugs, and enhance the architecture.
-          The provided code may contain inaccuracies, poor structure
-          or bugs, which participants are expected to resolve all the 
-          problems in a span of 1.5 hours.
+        <p>
+          <b>Expected Outcome:</b> Problem-solving speed, placement readiness
         </p>
-      );
-    },
+        <p>
+          <b>Expected Participants:</b> 80–100 students
+        </p>
+      </div>
+    ),
   },
-
   {
-    description: "A test of wit and intellect",
-    title: "Mind Maze",
+    description: "Tech trivia and puzzles",
+    title: "MindMaze – Technical Quiz",
     src: mindmaze,
     ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          Mind Maze is an exciting event designed to test participants'
-          problem-solving and analytical skills through a variety of challenges.
-          It features thought-provoking puzzles that require logical reasoning
-          to piece together clues and reach a solution.
-          Additionally, participants will tackle aptitude questions
-          that assess general knowledge and reasoning abilities.
-          The aptitude round will be conducted on HackerRank, offering a competitive
-          platform to showcase problem-solving expertise. Join us in navigating
-          this maze of engaging and skill-enhancing challenges!
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> Fun with Tech Trivia
         </p>
-      );
-    },
+        <p>
+          <b>Venue:</b> CB G09 & G20
+        </p>
+        <p>
+          <b>Date:</b> 2 Nov 2025 (01:30 pm – 03:00 pm)
+        </p>
+        <p>
+          <b>Fees:</b> ₹99/- per person (Solo/Team of 2)
+        </p>
+        <p>Quiz on CS, tech trends, puzzles & problem-solving.</p>
+        <p>
+          <b>Outcome:</b> Builds awareness, quick thinking, and teamwork.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 80–100 students
+        </p>
+      </div>
+    ),
   },
-
   {
-    description: "Get ready to get entertained",
-    title: " Aurelia - Cultural Event",
-    src: cultural,
+    description: "Pitch your ideas like a founder",
+    title: "Startup Pitch",
+    src: startup,
     ctaText: "Register Now",
-    ctaLink: "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59",
-    content: () => {
-      return (
-        <p style={{ textAlign: "left" }}>
-          Aurelia is the ultimate stage at VITAURA'25 where raw talent
-          meets electrifying performances! Whether you're a dancer with
-          moves that mesmerize, a singer who hits every note, a rapper with
-          rhymes that ignite, a dramatist who brings stories to life, or an
-          artist of any other kind—this is your moment to step into
-          the spotlight. From heart-pounding beats to soul-stirring performances,
-          this event is all about embracing the diverse and vibrant talent within
-          the VIT community. And it's not just about applause—it's about winning too!
-          With a fantastic prize pool awaiting the top performers, the stakes are high,
-          and the stage is set for unforgettable moments. So bring your passion,
-          bring your energy, and get ready to leave the audience in awe at Aurelia!
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> How to Pitch Like a Founder
         </p>
-      );
-    },
+        <p>
+          <b>Venue:</b> CB G09 & G20
+        </p>
+        <p>
+          <b>Date:</b> 2 Nov 2025 (03:00 pm – 05:00 pm)
+        </p>
+        <p>
+          <b>Fees:</b> ₹99/- per person (Solo/Team of 2)
+        </p>
+        <p>
+          Pitch startup ideas before a jury; chance for mentorship + incubation.
+        </p>
+        <p>
+          <b>Outcome:</b> Learn pitching, validation, communication skills.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 40–50 teams
+        </p>
+      </div>
+    ),
   },
-  
+  {
+    description: "Cybersecurity CTF challenge",
+    title: "Capture the Flag (CTF)",
+    src: ctf,
+    ctaText: "Register Now",
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> Intro to Cybersecurity & CTF Basics
+        </p>
+        <p>
+          <b>Venue:</b> CB Computer Labs
+        </p>
+        <p>
+          <b>Date:</b> 3 Nov 2025 (09:00 am – 11:00 pm)
+        </p>
+        <p>
+          <b>Fees:</b> ₹99/- per person (Solo/Team of 2)
+        </p>
+        <p>Solve real security puzzles, exploit vulns & defend systems.</p>
+        <p>
+          <b>Outcome:</b> Learn ethical hacking, vulnerability analysis.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 80–100 students
+        </p>
+      </div>
+    ),
+  },
+  {
+    description: "Hands-on AI & ML Hackathon",
+    title: "ML HackAura",
+    src: optibyte,
+    ctaText: "Register Now",
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Workshop:</b> ML in Action – Data to Deployment
+        </p>
+        <p>
+          <b>Venue:</b> CB-305
+        </p>
+        <p>
+          <b>Date:</b> 2–3 Nov 2025 (08:00 pm – 08:00 am)
+        </p>
+        <p>
+          <b>Fees:</b> ₹149/- per team (Team Size: 1–2)
+        </p>
+        <p>
+          Build ML models for real-world use cases: health, finance,
+          sustainability.
+        </p>
+        <p>
+          <b>Outcome:</b> Learn dataset handling, model building, ML deployment.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 80–100 students
+        </p>
+      </div>
+    ),
+  },
+  {
+    description: "Gaming competition",
+    title: "ArenaX – Gaming Arena",
+    src: gaming,
+    ctaText: "Register Now",
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Venue:</b> CB Computer Labs
+        </p>
+        <p>
+          <b>Date:</b> 3 Nov 2025 (02:00 pm – 05:00 pm)
+        </p>
+        <p>
+          <b>Fees:</b> ₹99/- per person (Solo/Team 2)
+        </p>
+        <p>Games: BGMI, Valorant, FIFA, COD. With live leaderboard.</p>
+        <p>
+          <b>Outcome:</b> Teamwork, fast decision-making, competitiveness.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 120–150 students
+        </p>
+      </div>
+    ),
+  },
+  {
+    description: "Cultural evening showcase",
+    title: "VITAURA Talent Night",
+    src: cultural,
+    ctaText: "Join Us",
+    ctaLink:
+      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+    content: () => (
+      <div style={{ textAlign: "left" }}>
+        <p>
+          <b>Venue:</b> AB2 Auditorium
+        </p>
+        <p>
+          <b>Date:</b> 3 Nov 2025 (05:30 pm – 08:00 pm)
+        </p>
+        <p>Showcase your talent in music, dance, stand-up, rap, or drama!</p>
+        <p>
+          <b>Why?</b> Adds a cultural & community spirit to VITAURA.
+        </p>
+        <p>
+          <b>Expected Outcome:</b> Student bonding, creativity & inclusivity.
+        </p>
+        <p>
+          <b>Expected Participants:</b> 80–100 students
+        </p>
+      </div>
+    ),
+  },
 ];
