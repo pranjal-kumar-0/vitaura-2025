@@ -10,7 +10,7 @@ const Convenor = () => {
   return (
     <div className="bg-black rounded-xl">
       <div>
-        <h1 className="text-left pl-8 mb-5 text-5xl font-fluxbox text-white">
+        <h1 className="text-center mb-5 text-5xl font-fluxbox text-white">
           Conveners
         </h1>
       </div>
