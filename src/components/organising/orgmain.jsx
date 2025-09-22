@@ -5,6 +5,7 @@ import Patrons from "./patron";
 import FacultyCoordinator from "./faculty";
 import Tech from "./tech";
 import CoPatron from "./co-patron";
+import RoleTabs2025 from "./RoleTabs2025";
 
 const RoleTabs = () => {
   const tabs = [
@@ -35,19 +36,19 @@ const RoleTabs = () => {
     },
   ];
 
-  return <Tabs tabs={tabs} containerClassName="justify-center" contentClassName="mt-4" />;
+  return <Tabs tabs={tabs} containerClassName="justify-center" contentClassName="mt-4" layoutId="role-tabs" />;
 };
 
 export function TabsDemo() {
   const yearTabs = [
     {
-      title: "2024",
-      value: "2024",
-      content: <RoleTabs />,
-    },
-    {
       title: "2025",
       value: "2025",
+      content: <RoleTabs2025 />,
+    },
+    {
+      title: "2024",
+      value: "2024",
       content: <RoleTabs />,
     },
   ];
@@ -59,7 +60,7 @@ export function TabsDemo() {
           Organising Committee
         </h1>
       </div>
-      <Tabs tabs={yearTabs} containerClassName="justify-center" contentClassName="mt-8" />
+      <Tabs tabs={yearTabs} containerClassName="justify-center" contentClassName="mt-8" layoutId="year-tabs" />
     </div>
   );
 }

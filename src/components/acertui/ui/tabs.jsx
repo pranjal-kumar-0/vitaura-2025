@@ -9,6 +9,7 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
   contentClassName,
+  layoutId = "clickedbutton",
 }) => {
   const [active, setActive] = useState(propTabs[0]);
 
@@ -30,7 +31,7 @@ export const Tabs = ({
             {/* Active Tab Highlight */}
             {active.value === tab.value && (
               <motion.div
-                layoutId="clickedbutton"
+                layoutId={layoutId}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
                   "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full",

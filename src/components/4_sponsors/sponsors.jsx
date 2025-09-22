@@ -29,7 +29,11 @@ const SponsorsSection = () => {
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
-        slidesPerView={3} // Display three sponsors at a time
+        slidesPerView={1}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
         loop={true}
         autoplay={{
           delay: 0, // No delay between slides
@@ -46,42 +50,42 @@ const SponsorsSection = () => {
           <img
             src={BrandHouseIMG}
             alt="Brand House"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={SmaaashIMG}
             alt="Smaaash"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={KpIMG}
             alt="KP"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={Asus}
             alt="Asus"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={IRG}
             alt="IRG"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center h-[150px] min-w-[33.33%]">
           <img
             src={Metro}
             alt="Metro"
-            className="max-h-[150px] object-contain"
+            className="max-h-[150px] object-contain transition-transform duration-300 hover:scale-110"
           />
         </SwiperSlide>
       </Swiper>

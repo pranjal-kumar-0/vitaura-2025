@@ -10,10 +10,18 @@ import TimeLine from "./timeline/fest-timeline";
 import { TabsDemo } from "./organising/orgmain";
 import video from "./video/video.mp4";
 import { ExpandableCardDemo } from './events/events';
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="text-gray-400 body-font bg-black" id="hero">
+    <motion.section 
+      className="text-gray-400 body-font bg-black" 
+      id="hero"
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.8, ease: "easeOut" }} 
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto flex px-5 py-24 flex-col md:flex-row items-center relative">
         <div className="flex flex-col items-center text-center mb-16 md:mb-0 md:w-1/2 md:text-left md:items-start lg:flex-grow lg:w-1/2 lg:pr-24 md:pr-16">
           <h1 className="title-font text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-4 font-medium text-white mt-14 md:mt-0">
@@ -59,7 +67,7 @@ const HeroSection = () => {
           <video src={video} muted autoPlay loop className="w-full h-auto" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
@@ -76,22 +84,60 @@ const LandingPageComponent = () => {
 
         <CountdownTimer targetDate={targetDate} />
 
-        <section id="about">
+        <motion.section 
+          id="about"
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
           <ScrollAnimation />
-        </section>
-        <section id="events">
+        </motion.section>
+        <motion.section 
+          id="events"
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
           <ExpandableCardDemo />
-        </section>
+        </motion.section>
         {/* <NumbersSection /> */}
-        <section id="timeline">
+        <motion.section 
+          id="timeline"
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
           <TimeLine />
-        </section>
+        </motion.section>
         {/* <InfoSection /> */}
-        <TabsDemo />
-        <SponsorsSection />
-        <footer id="contact">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
+          <TabsDemo />
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
+          <SponsorsSection />
+        </motion.div>
+        <motion.footer 
+          id="contact"
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }} 
+          viewport={{ once: true }}
+        >
           <Footer />
-        </footer>
+        </motion.footer>
       </main>
     </div>
   );
