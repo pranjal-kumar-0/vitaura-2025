@@ -1,6 +1,6 @@
 import React from "react";
 import convoTahir from "./images/convo/convo1.png";
-import convoAbhinav from "./images/convo/convo2.png";
+import dewansh from "./images/convo/dewansh.jpg";
 
 
 import "./org.css"
@@ -20,10 +20,10 @@ const Convenor2025 = () => {
           </div>
           <div className="details">
             <h1 className="font-spacemono">
-              [2025 Convener Name 1]
+              Sadiq Hasnain
             </h1>
             <h2 className="font-spacemono">
-              Convener VITAURA'25 <br /> [Role/Club]
+              Convener VITAURA'25
             </h2>
             <p
               className="desc"
@@ -36,14 +36,14 @@ const Convenor2025 = () => {
 
         <div className="card">
           <div className="poster">
-            <img src={convoAbhinav} alt="convenor 2" />
+            <img src={dewansh} alt="convenor 2" />
           </div>
           <div className="details">
             <h1 className="font-spacemono">
-              [2025 Convener Name 2]
+              Dewansh Wagh
             </h1>
             <h2 className="font-spacemono">
-              Convener VITAURA'25 <br /> [Role/Club]
+              Convener VITAURA'25 <br />
             </h2>
             <p
               className="desc"

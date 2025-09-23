@@ -16,7 +16,7 @@ const Tech2025 = () => {
         </h1>
       </div>
       <div className="wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-        <div className="card transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105">
+        <div className="card transition-all duration-300 hover:scale-105">
           <div className="poster">
             <img src={tanvish} alt="Tanvish Reddy Sanikommu" />
           </div>
@@ -33,7 +33,7 @@ const Tech2025 = () => {
           </div>
         </div>
 
-        <div className="card transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105">
+        <div className="card transition-all duration-300 hover:scale-105">
           <div className="poster">
             <img src={pranjal} alt="Pranjal Kumar" />
           </div>
@@ -50,7 +50,7 @@ const Tech2025 = () => {
           </div>
         </div>
 
-        <div className="card transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105">
+        <div className="card transition-all duration-300 hover:scale-105">
           <div className="poster">
             <img src={shaunak} alt="Shaunak Choudary" />
           </div>
@@ -65,7 +65,7 @@ const Tech2025 = () => {
           </div>
         </div>
 
-        <div className="card transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105">
+        <div className="card transition-all duration-300 hover:scale-105">
           <div className="poster">
             <img src={mayank} alt="Mayank" />
           </div>
