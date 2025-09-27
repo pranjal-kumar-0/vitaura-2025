@@ -30,6 +30,17 @@ const Timeline = () => {
         const rect = section.getBoundingClientRect();
         if (rect.top + section.offsetHeight / 5 < targetY) {
           section.classList.add("show-me");
+          const elementHeight = rect.height;
+          const visibleTop = Math.max(0, rect.top);
+          const visibleBottom = Math.min(window.innerHeight, rect.bottom);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+          const visibilityPercent = (visibleHeight / elementHeight) * 100;
+
+          if (visibilityPercent > 80) {
+            section.classList.add("focused-event");
+          } else if (visibilityPercent < 20) {
+            section.classList.remove("focused-event");
+          }
         }
       });
     }
@@ -69,14 +80,14 @@ const Timeline = () => {
           <div className="timeline__line" ref={lineRef}></div>
 
           {[
-            { date: "1–2 Nov 2025", time: "08:00PM - 08:00AM", event: "HackAura – Flagship Hackathon", venue: "CB-305" },
-            { date: "2 Nov 2025", time: "09:00AM - 12:00PM", event: "Code-a-Thon – DSA Coding", venue: "CB Computer Labs" },
-            { date: "2 Nov 2025", time: "01:30PM - 03:00PM", event: "MindMaze – Technical Quiz", venue: "CB G09 & G20" },
-            { date: "2 Nov 2025", time: "03:00PM - 05:00PM", event: "Startup Pitch", venue: "CB G09 & G20" },
-            { date: "3 Nov 2025", time: "09:00AM - 11:00PM", event: "Capture the Flag (CTF)", venue: "CB Computer Labs" },
-            { date: "2–3 Nov 2025", time: "08:00PM - 08:00AM", event: "ML HackAura", venue: "CB-305" },
-            { date: "3 Nov 2025", time: "02:00PM - 05:00PM", event: "ArenaX – Gaming Arena", venue: "CB Computer Labs" },
-            { date: "3 Nov 2025", time: "05:30PM - 08:00PM", event: "VITAURA Talent Night", venue: "AB2 Auditorium" },
+            { date: "1–26 Oct 2025", time: "08:00PM - 08:00AM", event: "HackAura – Flagship Hackathon", venue: "CB-305", description: "24-hour coding marathon to build innovative solutions. Compete for prizes and network with experts." },
+            { date: "26 Oct 2025", time: "09:00AM - 12:00PM", event: "Code-a-Thon – DSA Coding", venue: "CB Computer Labs", description: "Competitive programming contest focusing on data structures and algorithms under time constraints." },
+            { date: "26 Oct 2025", time: "01:30PM - 03:00PM", event: "MindMaze – Technical Quiz", venue: "CB G09 & G20", description: "Fast-paced quiz competition covering programming, electronics, and emerging technologies." },
+            { date: "26 Oct 2025", time: "03:00PM - 05:00PM", event: "Startup Pitch", venue: "CB G09 & G20", description: "Present startup ideas to investors and mentors for feedback and potential funding." },
+            { date: "27 Oct 2025", time: "09:00AM - 11:00PM", event: "Capture the Flag (CTF)", venue: "CB Computer Labs", description: "Cybersecurity challenge to find hidden flags and solve complex security puzzles." },
+            { date: "2–27 Oct 2025", time: "08:00PM - 08:00AM", event: "ML HackAura", venue: "CB-305", description: "Machine learning hackathon to build AI models and applications with cutting-edge techniques." },
+            { date: "27 Oct 2025", time: "02:00PM - 05:00PM", event: "ArenaX – Gaming Arena", venue: "CB Computer Labs", description: "Showcase gaming skills in various esports titles with exciting prizes." },
+            { date: "27 Oct 2025", time: "05:30PM - 08:00PM", event: "VITAURA Talent Night", venue: "AB2 Auditorium", description: "Evening of entertainment with music, dance, comedy, and student performances." },
           ].map((event, index) => (
             <div
               key={index}
@@ -85,49 +96,25 @@ const Timeline = () => {
             >
               <div className="timeline__section__bead"></div>
               <div className="timeline__section__content">
-                <h2
-                  style={{
-                    fontSize: '1.5em',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontWeight: '500',
-                    background: 'linear-gradient(to right, #F50062, #b700ba)',
-                    WebkitBackgroundClip: 'text',
-                    color: 'transparent',
-                  }}
-                >
-                  {event.date}
-                </h2>
-                <h3
-                  style={{
-                    fontSize: '1.2em',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontWeight: '400',
-                    background: 'linear-gradient(to right, #F50062, #b700ba)',
-                    WebkitBackgroundClip: 'text',
-                    color: 'transparent',
-                  }}
-                >
-                  {event.time}
-                </h3>
-                <p
-                  style={{
-                    color: 'white',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.1em',
-                  }}
-                >
-                  <strong>{event.event}</strong>
-                </p>
-                <p
-                  style={{
-                    color: 'lightgray',
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1em',
-                    fontStyle: 'italic',
-                  }}
-                >
-                  Venue: {event.venue}
-                </p>
+                <div className="event-header">
+                  <h2 className="event-date">
+                    {event.date}
+                  </h2>
+                  <h3 className="event-time">
+                    {event.time}
+                  </h3>
+                </div>
+                <div className="event-body">
+                  <h4 className="event-title">
+                    {event.event}
+                  </h4>
+                  <p className="event-venue">
+                    📍 {event.venue}
+                  </p>
+                  <p className="event-description">
+                    {event.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

@@ -11,6 +11,7 @@ import { TabsDemo } from "./organising/orgmain";
 import video from "./video/video.mp4";
 import { ExpandableCardDemo } from './events/events';
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -43,7 +44,7 @@ const HeroSection = () => {
               {/* Right white side with 'Coming Soon' text */}
               <div className="bg-gradient-to-r from-[#F50062] to-[#b700ba] text-white flex items-center justify-center px-[57px] py-2 md:px-6 md:py-[16px] rounded-b-lg sm:rounded-r-lg sm:rounded-bl-none group-hover:bg-gradient-to-r group-hover:from-[#fff] group-hover:to-[#fff] group-hover:text-black transition duration-1000 ease-in-out">
                 <span className="text-lg sm:text-xl font-bold font-spacemono">
-                  2nd Nov'25
+                   26th Oct'25
                 </span>
               </div>
             </div>
@@ -52,19 +53,17 @@ const HeroSection = () => {
             Join the Biggest Tech Fest ever at VIT-AP
           </p>
           <div className="flex justify-center">
-            <a
-              href="https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium-1043f33d-0e33-4bdc-b44b-6110f483bf59"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out"
+            <Link
+              to="/coming-soon"
+              className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out cursor-pointer"
             >
               Register Now
               <MdArrowOutward className="ml-2" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative">
-          <video src={video} muted autoPlay loop className="w-full h-auto" />
+          <video src={video} muted autoPlay loop preload="metadata" className="w-full h-auto max-h-[70vh]" />
         </div>
       </div>
     </motion.section>
@@ -73,6 +72,7 @@ const HeroSection = () => {
 
 const LandingPageComponent = () => {
   const targetDate = new Date("2025-11-02T18:00:00");
+
   return (
     <div>
       <Navbar />
@@ -139,6 +139,7 @@ const LandingPageComponent = () => {
           <Footer />
         </motion.footer>
       </main>
+
     </div>
   );
 };

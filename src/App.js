@@ -1,6 +1,6 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage";
-import Merchandise from "./components/merchandise/merchandise"; // Import the Merchandise component
+import ComingSoonPage from "./components/ComingSoonPage"; // Import the Coming Soon component
 import Loader from "./Loader/Loader";
 import gsap from "gsap";
 import { useState, useEffect } from "react";
@@ -32,6 +32,8 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />{" "}
             {/* Your landing page */}
+            <Route path="/coming-soon" element={<ComingSoonPage />} />{" "}
+            {/* Coming soon page */}
             {/* <Route path="/merchandise" element={<Merchandise />} /> Your merchandise page */}
             {/* Add other routes as needed */}
           </Routes>
