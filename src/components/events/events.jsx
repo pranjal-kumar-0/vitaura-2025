@@ -14,8 +14,46 @@ import cultural from "./events/Cultural.png";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState(null);
+  const [cardRefs, setCardRefs] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   const id = useId();
   const ref = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  const calculateAnimationProps = (index) => {
+    if (!containerRef.current) return { delay: index * 0.1, scale: 1, blur: 0, rotation: 0 };
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const screenCenterX = window.innerWidth / 2;
+    const screenCenterY = window.innerHeight / 2;
+    const cols = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
+    const row = Math.floor(index / cols);
+    const col = index % cols;
+    const cardWidth = 180;
+    const gap = 24;
+    const gridWidth = cols * cardWidth + (cols - 1) * gap;
+    const startX = containerRect.left + (containerRect.width - gridWidth) / 2;
+    const cardX = startX + col * (cardWidth + gap) + cardWidth / 2;
+    const cardY = containerRect.top + row * (cardWidth * 1.2 + gap) + cardWidth * 0.6;
+    const distance = Math.sqrt(
+      Math.pow(cardX - screenCenterX, 2) + Math.pow(cardY - screenCenterY, 2)
+    );
+    const angle = Math.atan2(cardY - screenCenterY, cardX - screenCenterX);
+    const maxDistance = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
+    const normalizedDistance = distance / maxDistance;
+    const rippleDelay = Math.floor(normalizedDistance * 8) * 0.1;
+    return {
+      delay: rippleDelay,
+      scale: 1 - normalizedDistance * 0.05,
+      blur: normalizedDistance * 3,
+      rotation: (normalizedDistance * 10) * Math.sin(angle),
+      initialY: 40 + (normalizedDistance * 20),
+      initialX: Math.cos(angle) * 20 * normalizedDistance
+    };
+  };
 
   useEffect(() => {
     function onKeyDown(event) {
@@ -160,22 +198,66 @@ export function ExpandableCardDemo() {
                 </div>
               </div>
               </motion.div>
-          </div>
-        ) : null}
+          </div>        ) : null}
       </AnimatePresence>
-      <ul className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 mx-auto">
-        {cards.map((card, index) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(245, 0, 98, 0.3), 0 10px 10px -5px rgba(183, 0, 186, 0.2)", transition: { duration: 0.15, ease: "easeOut" } }}
-            whileTap={{ scale: 0.95, transition: { duration: 0.15, ease: "easeOut" } }}
-            className={`p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer max-w-[180px] mx-auto shadow-lg border-2 border-transparent bg-gradient-to-br ${card.color} p-[2px]`}
-          >
+      <ul 
+        ref={containerRef}
+        className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 mx-auto"
+      >
+        {cards.map((card, index) => {
+          const animProps = calculateAnimationProps(index);
+          return (
+            <motion.div
+              layoutId={`card-${card.title}-${id}`}
+              key={card.title}
+              onClick={() => setActive(card)}              initial={{ 
+                opacity: 0, 
+                y: animProps.initialY,
+                x: animProps.initialX,
+                scale: 0.8,
+                rotate: animProps.rotation,
+                filter: `blur(${animProps.blur}px)`
+              }}              animate={isVisible ? { 
+                opacity: 1, 
+                y: 0,
+                x: 0,
+                scale: 1,
+                rotate: 0,
+                filter: "blur(0px)"
+              } : {}}
+              transition={{ 
+                delay: animProps.delay, 
+                duration: 1.2,
+                ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier for organic feel
+                type: "spring",
+                stiffness: 100,
+                damping: 15
+              }}              whileHover={{ 
+                scale: 1.08, 
+                y: -8,
+                rotate: animProps.rotation * 0.3,
+                boxShadow: "0 25px 35px -5px rgba(245, 0, 98, 0.4), 0 15px 15px -5px rgba(183, 0, 186, 0.3)", 
+                transition: { 
+                  duration: 0.3, 
+                  ease: "easeOut",
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20
+                } 
+              }}
+              whileTap={{ 
+                scale: 0.92, 
+                rotate: animProps.rotation * 0.1,
+                transition: { 
+                  duration: 0.1, 
+                  ease: "easeOut",
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 25
+                } 
+              }}
+              className={`p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer max-w-[180px] mx-auto shadow-lg border-2 border-transparent bg-gradient-to-br ${card.color} p-[2px]`}
+            >
             <div className="flex gap-4 flex-col w-full bg-black rounded-lg p-4">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
@@ -200,10 +282,10 @@ export function ExpandableCardDemo() {
                 >
                   {card.description}
                 </motion.p>
-              </div>
-            </div>
+              </div>            </div>
           </motion.div>
-        ))}
+          );
+        })}
       </ul>
     </div>
   );
