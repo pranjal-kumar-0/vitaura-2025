@@ -8,10 +8,10 @@ const Footer = () => {
     <footer className="mt-10 text-gray-200 body-font bg-stone-900">
       <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
         {/* Logo Only */}
-        <a className="flex items-center md:justify-start justify-center">
+        <div className="flex items-center md:justify-start justify-center">
           <img src={logo} alt="VITAURA'24 Logo" className="w-52" />{" "}
           {/* Ensuring aspect ratio */}
-        </a>
+        </div>
 
         {/* Copyright Section */}
         <p className=" bg-gradient-to-r from-[#F50062] to-[#b700ba] font-bold text-transparent bg-clip-text text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 font-spacemono">

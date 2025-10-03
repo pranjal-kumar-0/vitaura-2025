@@ -1,5 +1,5 @@
 import React from "react";
-import convoTahir from "./images/convo/convo1.png";
+import sadiq from "./images/convo/sadiq.jpg";
 import dewansh from "./images/convo/dewansh.jpg";
 
 
@@ -16,7 +16,7 @@ const Convenor2025 = () => {
       <div className="wrapper">
         <div className="card">
           <div className="poster">
-            <img src={convoTahir} alt="convenor 1" />
+            <img src={sadiq} alt="convenor 1" />
           </div>
           <div className="details">
             <h1 className="font-spacemono">

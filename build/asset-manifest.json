@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.2efd667f.css",
-    "main.js": "/static/js/main.57f0eddc.js",
+    "main.css": "/static/css/main.47a3023c.css",
+    "main.js": "/static/js/main.0302a276.js",
     "static/js/511.318b274a.chunk.js": "/static/js/511.318b274a.chunk.js",
+    "static/media/video.mp4": "/static/media/video.d1dd8d813b68cc89a211.mp4",
     "static/media/atharv1.png": "/static/media/atharv1.a134fc00f3c94561c06c.png",
     "static/media/anand.png": "/static/media/anand.99d934157d063b685657.png",
-    "static/media/video.mp4": "/static/media/video.789d268f765a23ecb453.mp4",
     "static/media/pranjal-kumar.webp": "/static/media/pranjal-kumar.ee0d05f45914db0c7dd5.webp",
     "static/media/Mind Maze.png": "/static/media/Mind Maze.d2ad5233a19ea2399973.png",
     "static/media/chirra.png": "/static/media/chirra.a40033d88de57b1cde89.png",
     "static/media/reg2.png": "/static/media/reg2.0cd8265ef6ae31edcf3c.png",
     "static/media/co3.png": "/static/media/co3.682309081f8a92b2af1d.png",
     "static/media/devvrat.png": "/static/media/devvrat.28ceb3524cb3a1b3b247.png",
-    "static/media/mayank.jpg": "/static/media/mayank.8ffcaa2d47b66fc27423.jpg",
     "static/media/Capture the flag.png": "/static/media/Capture the flag.87ba86ea7c07e9433b5d.png",
     "static/media/dewansh.jpg": "/static/media/dewansh.a273d66f80782a125759.jpg",
     "static/media/convo1.png": "/static/media/convo1.3162b580f58e29511aa9.png",
@@ -20,12 +19,14 @@
     "static/media/vc.png": "/static/media/vc.59b8fd6a2171fb618455.png",
     "static/media/tanvish-reddy-sanikommu.webp": "/static/media/tanvish-reddy-sanikommu.f54d4b86d423cae3a20f.webp",
     "static/media/Cultural.png": "/static/media/Cultural.50b188d759fb0c16e764.png",
+    "static/media/mayank.jpg": "/static/media/mayank.2e7066106a16a6a98e94.jpg",
     "static/media/ayus.jpeg": "/static/media/ayus.09f9981de5d7457b24b4.jpeg",
     "static/media/registrar.png": "/static/media/registrar.1be6fe5c32138be6b3da.png",
     "static/media/sudhakar.png": "/static/media/sudhakar.a9e3e8d784ad6abcccf4.png",
     "static/media/uditsir.png": "/static/media/uditsir.75be2dc3023e478036bb.png",
     "static/media/i_r_g.png": "/static/media/i_r_g.3e9be1482cf625449ec1.png",
     "static/media/associate.png": "/static/media/associate.cc297270583b7154b3d4.png",
+    "static/media/sadiq.jpg": "/static/media/sadiq.e90ebc929994df6e4d25.jpg",
     "static/media/alansans.ttf": "/static/media/alansans.9f305f5e2357889fc4d0.ttf",
     "static/media/shanthi.avif": "/static/media/shanthi.4ff6c318e639f92d5993.avif",
     "static/media/kuppusamy.avif": "/static/media/kuppusamy.8d16851e797a5559ebaf.avif",
@@ -43,12 +44,12 @@
     "static/media/metro.jpg": "/static/media/metro.1e5221db7646f9abc6ca.jpg",
     "static/media/smaaash.png": "/static/media/smaaash.4414ddbfa5e34e991c8a.png",
     "index.html": "/index.html",
-    "main.2efd667f.css.map": "/static/css/main.2efd667f.css.map",
-    "main.57f0eddc.js.map": "/static/js/main.57f0eddc.js.map",
+    "main.47a3023c.css.map": "/static/css/main.47a3023c.css.map",
+    "main.0302a276.js.map": "/static/js/main.0302a276.js.map",
     "511.318b274a.chunk.js.map": "/static/js/511.318b274a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2efd667f.css",
-    "static/js/main.57f0eddc.js"
+    "static/css/main.47a3023c.css",
+    "static/js/main.0302a276.js"
   ]
 }

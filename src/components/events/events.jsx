@@ -14,7 +14,6 @@ import cultural from "./events/Cultural.png";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState(null);
-  const [cardRefs, setCardRefs] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const id = useId();
   const ref = useRef(null);
@@ -173,7 +172,7 @@ export function ExpandableCardDemo() {
                     whileTap={{ scale: 0.95, transition: { duration: 0.15, ease: "easeOut" } }}
                   >
                     <Link
-                      to="/coming-soon"
+                      to={active.ctaLink}
                       className={`inline-block px-4 md:px-6 py-2 md:py-3 text-sm rounded-full font-bold text-white shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-r ${active.color} cursor-pointer text-center`}
                     >
                       {active.ctaText === "Join Us" ? "Join Us" : "Register Now"}
@@ -332,7 +331,7 @@ const cards = [
     color: "from-indigo-500 to-blue-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -351,13 +350,6 @@ const cards = [
           Teams solve startup & social problems. Winning teams gain recognition,
           internship offers, and mentorship.
         </p>
-        <p>
-          <b>Why?</b> Real-world problem solving, innovation & startup culture.
-        </p>
-        <p>
-          <b>Expected Outcome:</b> Learn to go from ideation to prototype.
-          Problem statements from industry + incubated startups.
-        </p>
       </div>
     ),
   },
@@ -368,7 +360,7 @@ const cards = [
     color: "from-green-500 to-teal-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -396,7 +388,7 @@ const cards = [
     color: "from-red-400 to-pink-500",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -422,7 +414,7 @@ const cards = [
     color: "from-orange-500 to-red-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -450,7 +442,7 @@ const cards = [
     color: "from-red-500 to-pink-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -476,7 +468,7 @@ const cards = [
     color: "from-cyan-500 to-blue-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -505,7 +497,7 @@ const cards = [
     color: "from-yellow-500 to-orange-600",
     ctaText: "Register Now",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>
@@ -528,7 +520,7 @@ const cards = [
     color: "from-pink-500 to-rose-600",
     ctaText: "Join Us",
     ctaLink:
-      "https://events.vitap.ac.in/e/vitaura-scope-internal-technical-symposium",
+      "https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df",
     content: () => (
       <div style={{ textAlign: "left" }}>
         <p>

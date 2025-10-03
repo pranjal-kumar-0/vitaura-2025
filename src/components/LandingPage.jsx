@@ -54,7 +54,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center">
             <Link
-              to="/coming-soon"
+              to="https://events.vitap.ac.in/e/technical-symposium-vitaura-25-4ec83539-389a-41d0-ad32-79bbf6aeb8df"
               className="inline-flex items-center text-[#ff9500] bg-black border-2 border-[#ff9500] py-2 px-6 sm:py-3 sm:px-6 md:py-4 md:px-8 focus:outline-none hover:bg-[#ff5900] hover:text-white hover:border-hotpink rounded text-lg sm:text-xl font-fluxbox font-bold transition duration-300 ease-in-out cursor-pointer"
             >
               Register Now

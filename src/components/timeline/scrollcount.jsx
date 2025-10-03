@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 
 const ScrollAnimation = () => {
   const sectionRef = useRef(null);
   const counterRefs = useRef([]);
 
-  const counters = [
+  const counters = useMemo(() => [
     { value: 10, label: "Events" },
     { value: 5000, label: "Registrations" },
     { value: 120000, label: "Prizes" },
-  ];
+  ], []);
 
   useEffect(() => {
 
@@ -100,7 +100,7 @@ const ScrollAnimation = () => {
     });
 
     // No need for ScrollTrigger cleanup since we removed it
-  }, []);
+  }, [counters]);
 
   return (
     <section
